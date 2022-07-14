@@ -168,6 +168,13 @@ public class endermanSpawnerClass implements Listener {
                 enderman.setCustomNameVisible(true);
                 enderman.setHealth(270);
             }
+            if(enderman.getLocation().getBlock().getBiome().equals(Biome.BADLANDS)){
+                Objects.requireNonNull(enderman.getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(270);
+                Objects.requireNonNull(enderman.getAttribute(Attribute.GENERIC_ATTACK_DAMAGE)).setBaseValue(25);
+                enderman.setCustomName(ChatColor.RED + "[24] enderman");
+                enderman.setCustomNameVisible(true);
+                enderman.setHealth(270);
+            }
             if(enderman.getLocation().getBlock().getBiome().equals(Biome.WINDSWEPT_FOREST)){
                 Objects.requireNonNull(enderman.getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(385);
                 Objects.requireNonNull(enderman.getAttribute(Attribute.GENERIC_ATTACK_DAMAGE)).setBaseValue(44);
@@ -183,7 +190,14 @@ public class endermanSpawnerClass implements Listener {
                 enderman.setHealth(385);
 
             }
+            if(enderman.getLocation().getBlock().getBiome().equals(Biome.SAVANNA)){
+                Objects.requireNonNull(enderman.getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(385);
+                Objects.requireNonNull(enderman.getAttribute(Attribute.GENERIC_ATTACK_DAMAGE)).setBaseValue(44);
+                enderman.setCustomName(ChatColor.DARK_RED + "[30] enderman");
+                enderman.setCustomNameVisible(true);
+                enderman.setHealth(385);
 
+            }
         }
     }
 

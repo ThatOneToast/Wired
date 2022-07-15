@@ -28,6 +28,7 @@ import me.austin.wired.Recipes.Tools.Hoe.LoyalHoeRecipe;
 import me.austin.wired.Recipes.Tools.Pickaxes.SpeedyPickaxeRecipe;
 import me.austin.wired.Recipes.Tools.Pickaxes.TuffedWoodenPickaxe;
 import me.austin.wired.Recipes.Tools.Swords.HardenedIronSword;
+import me.austin.wired.Recipes.Tools.Swords.MonsterSlayer;
 import me.austin.wired.Recipes.Tools.Swords.SkullCrusher;
 import me.austin.wired.Recipes.Armor.TankArmorRare.IronBootsRare;
 import me.austin.wired.Recipes.Armor.TankArmorRare.IronChestRare;
@@ -93,7 +94,6 @@ public class Wired extends JavaPlugin implements Listener {
         Objects.requireNonNull(getCommand("home")).setExecutor( new Home(this));
         Objects.requireNonNull(getCommand("death")).setExecutor( new Death(this));
         Objects.requireNonNull(getCommand("grecipe")).setExecutor(new recipe());
-        Objects.requireNonNull(getCommand("getUUID")).setExecutor(new getUUID());
         Objects.requireNonNull(getCommand("vault")).setExecutor(new OpenCommand());
 
         //Custom Weapons
@@ -102,6 +102,7 @@ public class Wired extends JavaPlugin implements Listener {
         SkullCrusher.SkullCrusherRecipe();
         HardenedIronSword.HardenedIronSwordRecipe();
         PoisonBow.PoisonBowRecipe();
+        MonsterSlayer.MonsterSlayerRecipe();
 
         //Tank Armor Rare
         IronChestRare.IronChestRecipe();

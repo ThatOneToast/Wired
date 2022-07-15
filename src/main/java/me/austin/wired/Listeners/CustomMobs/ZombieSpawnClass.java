@@ -28,7 +28,7 @@ public class ZombieSpawnClass implements Listener {
                 zombie.setCustomName(ChatColor.GREEN + "[3] Zombie");
                 zombie.setCustomNameVisible(true);
                 zombie.setHealth(10);
-                
+
             }
             if(zombie.getLocation().getBlock().getBiome().equals(Biome.SNOWY_PLAINS)){
                 Objects.requireNonNull(zombie.getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(10);

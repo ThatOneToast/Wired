@@ -51,6 +51,7 @@ public class SkeletonSpawnClass implements Listener {
                 skeleton.setCustomNameVisible(true);
                 skeleton.setHealth(27);
 
+
             }
             if(skeleton.getLocation().getBlock().getBiome().equals(Biome.BIRCH_FOREST)) {
                 Objects.requireNonNull(skeleton.getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(27);

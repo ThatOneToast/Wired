@@ -32,6 +32,8 @@ public class MonsterSlayerUtils implements Listener {
 
         AttributeModifier attackSpeed = new AttributeModifier(UUID.randomUUID(), "GENERIC_ATTACK_SPEED", 0.5, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
         meta.addAttributeModifier(Attribute.GENERIC_ATTACK_SPEED, attackSpeed);
+        AttributeModifier baseDamage = new AttributeModifier(UUID.randomUUID(), "GENERIC_ATTACK_DAMAGE", 8, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
+        meta.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, baseDamage);
         MonsterSlayer.setItemMeta(meta);
         return MonsterSlayer;
     }

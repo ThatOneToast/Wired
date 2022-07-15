@@ -14,7 +14,7 @@ public class MonsterSlayer {
     public static void MonsterSlayerRecipe() {
         //Diamond Sword ( Skull Crusher ) ( Legendary )
         ShapedRecipe MonsterSlayer = new ShapedRecipe(new NamespacedKey(getPlugin(), "MonsterSlayer"), new ItemStack(MonsterSlayerUtils.createMonsterSlayer()));
-        MonsterSlayer.shape(" D ", "ADA", " D");
+        MonsterSlayer.shape(" D ", "ADA", " D ");
         MonsterSlayer.setIngredient('D', Material.DIAMOND_BLOCK);
         MonsterSlayer.setIngredient('A', Material.DIAMOND);
         Bukkit.addRecipe(MonsterSlayer);

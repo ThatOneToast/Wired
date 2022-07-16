@@ -24,9 +24,9 @@ public class HolyGrailBoots {
         itemLore.add(ChatColor.DARK_GREEN + "These Shoes is made of pure holy grail.");
         itemLore.add(ChatColor.LIGHT_PURPLE + "Rarity: Mythic");
 
-        AttributeModifier modifier = new AttributeModifier(UUID.randomUUID(), "generic.max_health", 15, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.FEET);
+        AttributeModifier modifier = new AttributeModifier(UUID.randomUUID(), "generic.max_health", 30, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.FEET);
         meta.addAttributeModifier(Attribute.GENERIC_MAX_HEALTH, modifier);
-        AttributeModifier armor = new AttributeModifier(UUID.randomUUID(), "GENERIC_ARMOR", 10, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.FEET);
+        AttributeModifier armor = new AttributeModifier(UUID.randomUUID(), "GENERIC_ARMOR", 20, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.FEET);
         meta.addAttributeModifier(Attribute.GENERIC_ARMOR, armor);
 
 

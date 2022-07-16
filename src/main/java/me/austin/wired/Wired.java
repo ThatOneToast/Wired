@@ -89,6 +89,7 @@ public class Wired extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new CreeperSpawnerClass(this), this);
         getServer().getPluginManager().registerEvents(new ZombieDeathClass(), this);
         getServer().getPluginManager().registerEvents(new endermanDeathClass(), this);
+        getServer().getPluginManager().registerEvents(new EnderDragonSpawnClass(), this);
 
 
         // Register our commands

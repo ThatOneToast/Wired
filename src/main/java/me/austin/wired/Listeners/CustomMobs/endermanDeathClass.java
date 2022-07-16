@@ -44,6 +44,14 @@ public class endermanDeathClass implements Listener {
                     enderman.getWorld().dropItem(enderman.getLocation(), HolyGrailFragments.createHolyGrailFragmentMiddlePiece());
                 }
             }
+            if(enderman.getName().equals(ChatColor.DARK_RED + "[70] enderman")){
+                //get a random number out of 100
+                double random = Math.random() * 100;
+                if(random >= 65){
+                    event.getDrops().clear();
+                    enderman.getWorld().dropItem(enderman.getLocation(), HolyGrailFragments.createHolyGrailFragmentMiddlePiece());
+                }
+            }
         }
     }
 }

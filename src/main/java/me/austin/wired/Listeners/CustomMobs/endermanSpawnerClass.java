@@ -206,6 +206,14 @@ public class endermanSpawnerClass implements Listener {
                 enderman.setHealth(385);
 
             }
+            if(enderman.getLocation().getBlock().getBiome().equals(Biome.THE_END)){
+                Objects.requireNonNull(enderman.getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(575);
+                Objects.requireNonNull(enderman.getAttribute(Attribute.GENERIC_ATTACK_DAMAGE)).setBaseValue(75);
+                enderman.setCustomName(ChatColor.DARK_RED + "[70] enderman");
+                enderman.setCustomNameVisible(true);
+                enderman.setHealth(385);
+
+            }
         }
     }
 

@@ -15,7 +15,7 @@ import static me.austin.wired.Wired.getPlugin;
 public class HolyPantsMythic {
     public static void HolyPantsRecipe() {
         ShapedRecipe HolyPants = new ShapedRecipe(new NamespacedKey(getPlugin(), "HolyPants"), new ItemStack(HolyGrailLeggings.createHolyGrailPants()));
-        HolyPants.shape("DBD", "BAB", "DBD");
+        HolyPants.shape("DBD", "BBB", "DAD");
         HolyPants.setIngredient('D', new RecipeChoice.ExactChoice(HolyGrailFragments.createHolyGrailFragmentSurrounding()));
         HolyPants.setIngredient('A', new RecipeChoice.ExactChoice(HolyGrailFragments.createHolyGrailFragmentMiddlePiece()));
         HolyPants.setIngredient('B', Material.DIAMOND_BLOCK);

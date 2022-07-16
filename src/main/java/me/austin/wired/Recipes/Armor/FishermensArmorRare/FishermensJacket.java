@@ -9,7 +9,7 @@ import org.bukkit.inventory.ShapedRecipe;
 
 import static me.austin.wired.Wired.getPlugin;
 
-public class FIshermensJacket {
+public class FishermensJacket {
 
     public static void IronChestRecipe() {
         //Iron Chest ( Tank ) ( RARE )

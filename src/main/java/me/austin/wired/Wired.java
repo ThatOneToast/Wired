@@ -4,7 +4,7 @@ import me.austin.wired.Commands.*;
 import me.austin.wired.Listeners.CustomItemListeners.*;
 import me.austin.wired.Listeners.CustomMobs.*;
 import me.austin.wired.Listeners.ServerListeners.*;
-import me.austin.wired.Recipes.Armor.FishermensArmorRare.FIshermensJacket;
+import me.austin.wired.Recipes.Armor.FishermensArmorRare.FishermensJacket;
 import me.austin.wired.Recipes.Armor.FishermensArmorRare.FishermensBoots;
 import me.austin.wired.Recipes.Armor.FishermensArmorRare.FishermensHat;
 import me.austin.wired.Recipes.Armor.FishermensArmorRare.FishermensPants;
@@ -95,6 +95,7 @@ public class Wired extends JavaPlugin implements Listener {
         Objects.requireNonNull(getCommand("death")).setExecutor( new Death(this));
         Objects.requireNonNull(getCommand("grecipe")).setExecutor(new recipe());
         Objects.requireNonNull(getCommand("vault")).setExecutor(new OpenCommand());
+        Objects.requireNonNull(getCommand("rEnchant")).setExecutor(new rEnchant());
 
         //Custom Weapons
         LightningBow.LightningBowRecipe();
@@ -126,7 +127,7 @@ public class Wired extends JavaPlugin implements Listener {
         FishermensBoots.IronBootsRecipe();
         FishermensHat.IronHelmRecipe();
         FishermensPants.IronPantsRecipe();
-        FIshermensJacket.IronChestRecipe();
+        FishermensJacket.IronChestRecipe();
 
         //Holy Grail Armor Mythic
         HolyBootsMythic.HolyBootsRecipe();

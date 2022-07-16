@@ -30,7 +30,7 @@ public class HolyGrailChestplate {
 
 
 
-        meta.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 1, true);
+        meta.addEnchant(Enchantment.DURABILITY, 8, true);
         meta.setLore(itemLore);
         item.setItemMeta(meta);
         return item;

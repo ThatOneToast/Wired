@@ -100,6 +100,15 @@ public class CreeperSpawnerClass implements Listener {
                 creeper.setExplosionRadius(9);
 
             }
+            if(creeper.getLocation().getBlock().getBiome().equals(Biome.FOREST)){
+                Objects.requireNonNull(creeper.getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(44);
+                Objects.requireNonNull(creeper.getAttribute(Attribute.GENERIC_ATTACK_DAMAGE)).setBaseValue(6);
+                creeper.setCustomName(ChatColor.DARK_GREEN + "[9] creeper");
+                creeper.setCustomNameVisible(true);
+                creeper.setHealth(44);
+                creeper.setExplosionRadius(9);
+
+            }
             if(creeper.getLocation().getBlock().getBiome().equals(Biome.SWAMP)){
                 Objects.requireNonNull(creeper.getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(105);
                 Objects.requireNonNull(creeper.getAttribute(Attribute.GENERIC_ATTACK_DAMAGE)).setBaseValue(10);

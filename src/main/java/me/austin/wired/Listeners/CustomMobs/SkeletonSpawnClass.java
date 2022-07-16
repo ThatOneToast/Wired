@@ -84,6 +84,14 @@ public class SkeletonSpawnClass implements Listener {
                 skeleton.setHealth(44);
 
             }
+            if(skeleton.getLocation().getBlock().getBiome().equals(Biome.FOREST)){
+                Objects.requireNonNull(skeleton.getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(44);
+                Objects.requireNonNull(skeleton.getAttribute(Attribute.GENERIC_ATTACK_DAMAGE)).setBaseValue(6);
+                skeleton.setCustomName(ChatColor.DARK_GREEN + "[9] Zombie");
+                skeleton.setCustomNameVisible(true);
+                skeleton.setHealth(44);
+
+            }
             if(skeleton.getLocation().getBlock().getBiome().equals(Biome.MANGROVE_SWAMP)){
                 Objects.requireNonNull(skeleton.getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(44);
                 Objects.requireNonNull(skeleton.getAttribute(Attribute.GENERIC_ATTACK_DAMAGE)).setBaseValue(6);

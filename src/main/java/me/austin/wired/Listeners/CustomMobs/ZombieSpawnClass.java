@@ -19,7 +19,6 @@ public class ZombieSpawnClass implements Listener {
     public ZombieSpawnClass(Wired plugin) {
         ZombieSpawnClass.plugin = plugin;
     }
-
     @EventHandler
     public static void onZombieSpawn(CreatureSpawnEvent event) {
         if (event.getEntity() instanceof Zombie zombie) {
@@ -78,6 +77,13 @@ public class ZombieSpawnClass implements Listener {
                 zombie.setHealth(43);
             }
             if(zombie.getLocation().getBlock().getBiome().equals(Biome.MANGROVE_SWAMP)){
+                Objects.requireNonNull(zombie.getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(43);
+                Objects.requireNonNull(zombie.getAttribute(Attribute.GENERIC_ATTACK_DAMAGE)).setBaseValue(6);
+                zombie.setCustomName(ChatColor.DARK_GREEN + "[9] Zombie");
+                zombie.setCustomNameVisible(true);
+                zombie.setHealth(43);
+            }
+            if(zombie.getLocation().getBlock().getBiome().equals(Biome.FOREST)){
                 Objects.requireNonNull(zombie.getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(43);
                 Objects.requireNonNull(zombie.getAttribute(Attribute.GENERIC_ATTACK_DAMAGE)).setBaseValue(6);
                 zombie.setCustomName(ChatColor.DARK_GREEN + "[9] Zombie");

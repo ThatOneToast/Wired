@@ -83,6 +83,14 @@ public class endermanSpawnerClass implements Listener {
                 enderman.setHealth(44);
 
             }
+            if(enderman.getLocation().getBlock().getBiome().equals(Biome.FOREST)){
+                Objects.requireNonNull(enderman.getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(44);
+                Objects.requireNonNull(enderman.getAttribute(Attribute.GENERIC_ATTACK_DAMAGE)).setBaseValue(6);
+                enderman.setCustomName(ChatColor.DARK_GREEN + "[9] Zombie");
+                enderman.setCustomNameVisible(true);
+                enderman.setHealth(44);
+
+            }
             if(enderman.getLocation().getBlock().getBiome().equals(Biome.MANGROVE_SWAMP)){
                 Objects.requireNonNull(enderman.getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(44);
                 Objects.requireNonNull(enderman.getAttribute(Attribute.GENERIC_ATTACK_DAMAGE)).setBaseValue(6);

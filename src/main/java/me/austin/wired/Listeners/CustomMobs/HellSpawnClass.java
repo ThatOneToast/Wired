@@ -23,13 +23,6 @@ public class HellSpawnClass implements Listener {
             zombie.setCustomNameVisible(true);
             zombie.setHealth(10);
         }
-        if (event.getEntity() instanceof Enderman enderman) {
-            Objects.requireNonNull(enderman.getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(170);
-            Objects.requireNonNull(enderman.getAttribute(Attribute.GENERIC_ATTACK_DAMAGE)).setBaseValue(22);
-            enderman.setCustomName(ChatColor.GOLD + "[18] Enderman");
-            enderman.setCustomNameVisible(true);
-            enderman.setHealth(10);
-        }
         if(event.getEntity() instanceof Blaze blaze){
             Objects.requireNonNull(blaze.getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(170);
             Objects.requireNonNull(blaze.getAttribute(Attribute.GENERIC_ATTACK_DAMAGE)).setBaseValue(22);

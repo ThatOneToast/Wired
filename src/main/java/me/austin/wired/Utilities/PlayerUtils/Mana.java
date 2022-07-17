@@ -10,7 +10,9 @@ import java.util.HashMap;
 public class Mana {
 
     public static HashMap<Player, Double> ARCANE_POWER = new HashMap<>();
-    public static final double MAX_ArcanePower = 100;
+    public static HashMap<Player, Double> MAX_ArcanePower = new HashMap<>();
+    public static HashMap<Player, Double> MANA_PER_SECOND = new HashMap<>();
+
 
 
     @NonNull
@@ -51,8 +53,8 @@ public class Mana {
                 if (!(hasMaxMana(p))) {
                     continue;
                 }
-                if (getPlayerMana(p) < MAX_ArcanePower){
-                    addMana(p, (float) 0.5);
+                if (getPlayerMana(p) < MAX_ArcanePower.get(p)){
+                    addMana(p, MANA_PER_SECOND.get(p));
                 }
             }
         }, 0L, 20L);

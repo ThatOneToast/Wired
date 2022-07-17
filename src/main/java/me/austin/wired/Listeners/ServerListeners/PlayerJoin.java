@@ -4,6 +4,7 @@ import me.austin.wired.Utilities.Armor.Starter.StarterBoots;
 import me.austin.wired.Utilities.Armor.Starter.StarterChest;
 import me.austin.wired.Utilities.Armor.Starter.StarterHelm;
 import me.austin.wired.Utilities.Armor.Starter.StarterPants;
+import me.austin.wired.Utilities.PlayerUtils.Mana;
 import me.austin.wired.Utilities.PlayerVaults.VaultUtils;
 import me.austin.wired.Wired;
 import org.bukkit.ChatColor;
@@ -42,7 +43,11 @@ public class PlayerJoin implements Listener {
             player.getInventory().addItem(new ItemStack(Material.DIAMOND_SWORD));
             player.getInventory().addItem(new ItemStack(Material.DIAMOND_PICKAXE));
             player.getInventory().addItem(new ItemStack(Material.COOKED_BEEF, 32));
+            Mana.MAX_ArcanePower.put(event.getPlayer(), 100.0);
+            Mana.MANA_PER_SECOND.put(event.getPlayer(), 1.0);
         }else{
+            Mana.MAX_ArcanePower.put(event.getPlayer(), 100.0);
+            Mana.MANA_PER_SECOND.put(event.getPlayer(), 1.0);
             event.setJoinMessage(ChatColor.RED + "" + ChatColor.BOLD + "[Wired] " + color + "Welcome Back " + event.getPlayer().getName() + color + "!");
         }
 

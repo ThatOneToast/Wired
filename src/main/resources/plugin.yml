@@ -16,3 +16,7 @@ commands:
     description: "get a player's vault balance"
   rEnchant:
     description: "Remove all enchants from your tool and get a book of them all."
+  setMaxMana:
+    description: "Set your max mana"
+  setManaRegen:
+    description: "Set your mana regen"

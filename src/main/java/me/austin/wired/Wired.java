@@ -8,6 +8,10 @@ import me.austin.wired.Recipes.Armor.FishermensArmorRare.FishermensJacket;
 import me.austin.wired.Recipes.Armor.FishermensArmorRare.FishermensBoots;
 import me.austin.wired.Recipes.Armor.FishermensArmorRare.FishermensHat;
 import me.austin.wired.Recipes.Armor.FishermensArmorRare.FishermensPants;
+import me.austin.wired.Recipes.Armor.HolyGrailManaMythic.HolyBootsMythicRecipe;
+import me.austin.wired.Recipes.Armor.HolyGrailManaMythic.HolyChestMythicRecipe;
+import me.austin.wired.Recipes.Armor.HolyGrailManaMythic.HolyHelmMythicRecipe;
+import me.austin.wired.Recipes.Armor.HolyGrailManaMythic.HolyPantsMythicRecipe;
 import me.austin.wired.Recipes.Armor.HolyGrailMythic.HolyBootsMythic;
 import me.austin.wired.Recipes.Armor.HolyGrailMythic.HolyChestMythic;
 import me.austin.wired.Recipes.Armor.HolyGrailMythic.HolyHelmMythic;
@@ -95,6 +99,7 @@ public class Wired extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new EnderDragonSpawnClass(), this);
         getServer().getPluginManager().registerEvents(new HellSpawnClass(), this);
         getServer().getPluginManager().registerEvents(new ManaHealthChange(), this);
+        getServer().getPluginManager().registerEvents(new SpiderDeathClass(), this);
 
 
         // Register our commands
@@ -104,6 +109,8 @@ public class Wired extends JavaPlugin implements Listener {
         Objects.requireNonNull(getCommand("grecipe")).setExecutor(new recipe());
         Objects.requireNonNull(getCommand("vault")).setExecutor(new OpenCommand());
         Objects.requireNonNull(getCommand("rEnchant")).setExecutor(new rEnchant());
+        Objects.requireNonNull(getCommand("setMaxMana")).setExecutor(new setMaxMana());
+        Objects.requireNonNull(getCommand("setManaRegen")).setExecutor(new SetRegenMana());
 
         //Custom Weapons
         LightningBow.LightningBowRecipe();
@@ -143,6 +150,13 @@ public class Wired extends JavaPlugin implements Listener {
         HolyHelmMythic.HolyHelmetRecipe();
         HolyPantsMythic.HolyPantsRecipe();
 
+        //Holy Grail Mana Armor Mythic
+        HolyBootsMythicRecipe.HolyBootsManaRecipe();
+        HolyChestMythicRecipe.HolyChestManaRecipe();
+        HolyHelmMythicRecipe.HolyHelmetManaRecipe();
+        HolyPantsMythicRecipe.HolyPantsManaRecipe();
+
+
         //Shields
         FortifiedShieldRecipe.FortifiedShieldRecipe();
         HeavyFortifiedShieldRecipe.HeavyFortifiedShieldRecipe();
@@ -175,7 +189,7 @@ public class Wired extends JavaPlugin implements Listener {
 
 
         for(Player player : Bukkit.getServer().getOnlinePlayers()){
-            Mana.ARCANE_POWER.put(player, Mana.MAX_ArcanePower);
+            Mana.ARCANE_POWER.put(player, Mana.MAX_ArcanePower.get(player));
             player.setHealth(40);
             player.setSaturation(20);
             player.setFoodLevel(20);

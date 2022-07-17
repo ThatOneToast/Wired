@@ -40,9 +40,13 @@ import me.austin.wired.Recipes.Armor.TraversalArmorCommon.LeatherChestCommon;
 import me.austin.wired.Recipes.Armor.TraversalArmorCommon.LeatherHelmetCommon;
 import me.austin.wired.Recipes.Armor.TraversalArmorCommon.LeatherPantsCommon;
 import me.austin.wired.Utilities.HomeFiles;
+import me.austin.wired.Utilities.PlayerUtils.Mana;
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
+import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
+
 import java.io.IOException;
 import java.util.*;
 
@@ -67,6 +71,7 @@ public class Wired extends JavaPlugin implements Listener {
 
 
 
+
         // Register our event listeners
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
         getServer().getPluginManager().registerEvents(new deathListener(), this);
@@ -81,7 +86,6 @@ public class Wired extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new CombatLog(), this);
         getServer().getPluginManager().registerEvents(new VillagerKill(), this);
         getServer().getPluginManager().registerEvents(new HealerListener(), this);
-        getServer().getPluginManager().registerEvents(new HealthChange(), this);
         getServer().getPluginManager().registerEvents(new SkeletonSpawnClass(this), this);
         getServer().getPluginManager().registerEvents(new SpiderSpawnClass(this), this);
         getServer().getPluginManager().registerEvents(new endermanSpawnerClass(this), this);
@@ -90,6 +94,7 @@ public class Wired extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new endermanDeathClass(), this);
         getServer().getPluginManager().registerEvents(new EnderDragonSpawnClass(), this);
         getServer().getPluginManager().registerEvents(new HellSpawnClass(), this);
+        getServer().getPluginManager().registerEvents(new ManaHealthChange(), this);
 
 
         // Register our commands
@@ -165,6 +170,18 @@ public class Wired extends JavaPlugin implements Listener {
 
         //Exp Bottle
         ExperienceBottle.ExperienceBottleRecipe();
+
+
+
+
+        for(Player player : Bukkit.getServer().getOnlinePlayers()){
+            Mana.ARCANE_POWER.put(player, Mana.MAX_ArcanePower);
+            player.setHealth(40);
+            player.setSaturation(20);
+            player.setFoodLevel(20);
+        }
+        Mana.addManaPerSecond();
+
 
 
     }

@@ -58,6 +58,7 @@ public class PlayerJoin implements Listener {
 
 
         }
+
     }
     @EventHandler
     public void onInventoryClose(InventoryCloseEvent e){

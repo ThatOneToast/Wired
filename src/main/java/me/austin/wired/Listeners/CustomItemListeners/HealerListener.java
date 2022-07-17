@@ -1,11 +1,11 @@
 package me.austin.wired.Listeners.CustomItemListeners;
 
+import me.austin.wired.Utilities.PlayerUtils.Mana;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockPlaceEvent;
-import org.bukkit.event.inventory.CraftItemEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
@@ -22,20 +22,25 @@ public class HealerListener implements Listener {
         ItemStack itemInMainHand = p.getInventory().getItemInMainHand();
         if (itemInMainHand.getItemMeta() != null) {
             if (itemInMainHand.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "Healer")) {
-                if (incombat.contains(p.getName())) {
-                    p.sendMessage(ChatColor.RED + "Since you are in combat, the affect of this item is lowered.");
-                    p.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 20 * 10, 0));
-                    p.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20 * 10, 0));
+                if (Mana.getPlayerMana(p) >= 30) {
+                    Mana.removeMana(p, 30);
+                    if (incombat.contains(p.getName())) {
+                        p.sendMessage(ChatColor.RED + "Since you are in combat, the affect of this item is lowered.");
+                        p.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 20 * 10, 0));
+                        p.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20 * 10, 0));
 
-                } else {
-                    p.sendMessage(ChatColor.GREEN + "You are not in combat, the affect of this item is normal.");
-                    p.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 20 * 60, 1));
-                    p.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20 * 60, 1));
+                    } else {
+                        p.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 20 * 60, 1));
+                        p.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20 * 60, 1));
+                    }
+                }else{
+                    p.sendMessage(ChatColor.RED + "You do not have enough mana to use this item.");
                 }
+
+            }
             }
 
         }
-    }
 
     @EventHandler
     public void onBlockPlace(BlockPlaceEvent event) {

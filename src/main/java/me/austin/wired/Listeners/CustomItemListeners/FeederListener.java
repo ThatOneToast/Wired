@@ -1,5 +1,6 @@
 package me.austin.wired.Listeners.CustomItemListeners;
 
+import me.austin.wired.Utilities.PlayerUtils.Mana;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -17,13 +18,19 @@ public class FeederListener implements Listener {
         ItemStack itemInMainHand = p.getInventory().getItemInMainHand();
         if (itemInMainHand.getItemMeta() != null) {
             if (itemInMainHand.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "" + ChatColor.BOLD + "Feeder")) {
-                if (e.getAction() == Action.RIGHT_CLICK_AIR) {
-                    if(p.getFoodLevel() < 20){
-                        p.setSaturation(20);
-                        p.setFoodLevel(20);
-                    }else{
-                        p.sendMessage(ChatColor.RED + "You are already full food!");
+                if(Mana.getPlayerMana(p) >= 10){
+                    if (e.getAction() == Action.RIGHT_CLICK_AIR) {
+                        Mana.removeMana(p, 10);
+                        if(p.getFoodLevel() < 20){
+                            p.setSaturation(20);
+                            p.setFoodLevel(20);
+                        }else{
+                            p.sendMessage(ChatColor.RED + "You are already full food!");
+                        }
+                }else{
+                    p.sendMessage(ChatColor.RED + "You do not have enough mana to use this item.");
                     }
+
                 }
             }
 

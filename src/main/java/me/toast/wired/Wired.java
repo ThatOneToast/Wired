@@ -105,7 +105,7 @@ public class Wired extends JavaPlugin implements Listener {
         // Register our commands
         Objects.requireNonNull(getCommand("sethome")).setExecutor( new SetHome(this));
         Objects.requireNonNull(getCommand("home")).setExecutor( new Home(this));
-        Objects.requireNonNull(getCommand("death")).setExecutor( new Death(this));
+        Objects.requireNonNull(getCommand("death")).setExecutor( new Death());
         Objects.requireNonNull(getCommand("grecipe")).setExecutor(new recipe());
         Objects.requireNonNull(getCommand("vault")).setExecutor(new OpenCommand());
         Objects.requireNonNull(getCommand("rEnchant")).setExecutor(new rEnchant());

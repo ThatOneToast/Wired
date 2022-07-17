@@ -16,6 +16,8 @@ import org.bukkit.event.entity.EntityRegainHealthEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitRunnable;
 
+import java.util.Arrays;
+
 public class ManaHealthChange implements Listener {
 
     @EventHandler
@@ -34,7 +36,7 @@ public class ManaHealthChange implements Listener {
                     armor[1] = new ItemStack(HolyGrailChestplateMana.createHolyGrailManaChestPlate());
                     armor[2] = new ItemStack(HolyGrailLeggingsMana.createHolyGrailPants());
                     armor[3] = new ItemStack(HolyGrailBootsMana.createHolyGrailManaBoots());
-                    if(player.getInventory().getArmorContents().equals(armor)){
+                    if(Arrays.equals(player.getInventory().getArmorContents(), armor)){
 
                     }
 

@@ -10,7 +10,6 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.RecipeChoice;
 import org.bukkit.inventory.ShapedRecipe;
 
-import static me.toast.wired.Wired.getPlugin;
 
 public class HolyHelmMythic {
     public static void HolyHelmetRecipe() {

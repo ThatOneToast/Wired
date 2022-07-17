@@ -9,7 +9,6 @@ import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.RecipeChoice;
 import org.bukkit.inventory.ShapedRecipe;
 
-import static me.toast.wired.Wired.getPlugin;
 
 public class Healer {
     public static void HealerRecipe() {

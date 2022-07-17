@@ -31,7 +31,7 @@ public class FlyingFeatherListener implements Listener {
                                 @Override
                                 public void run(){
                                     if(e.getPlayer().isFlying()){
-                                        Mana.removeMana(p, 1.5);
+                                        Mana.removeMana(p, 1.0);
                                         if(Mana.getPlayerMana(p) <= 1){
                                             p.setFlying(false);
                                             p.setAllowFlight(false);

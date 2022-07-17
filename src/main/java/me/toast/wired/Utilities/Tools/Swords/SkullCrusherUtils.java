@@ -5,8 +5,6 @@ import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeModifier;
 import org.bukkit.enchantments.Enchantment;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.inventory.CraftItemEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -17,12 +15,12 @@ import java.util.UUID;
 
 public class SkullCrusherUtils {
 
-    @EventHandler
     public static ItemStack createSkullCrusher(){
         ItemStack skullCrusher = new ItemStack(Material.DIAMOND_SWORD);
         ItemMeta meta = skullCrusher.getItemMeta();
+        assert meta != null;
         meta.setDisplayName(ChatColor.GOLD + "Skull Crusher");
-        List<String> skullCrusherLore = new ArrayList<String>();
+        List<String> skullCrusherLore = new ArrayList<>();
         skullCrusherLore.add(ChatColor.DARK_GREEN + "Base Damage +10");
         skullCrusherLore.add(ChatColor.DARK_GREEN + "Base Attack Speed +0.5");
         skullCrusherLore.add(ChatColor.GOLD + "Rarity: LEGENDARY");

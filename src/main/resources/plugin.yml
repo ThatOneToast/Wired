@@ -1,6 +1,6 @@
 name: Wired
 version: '${project.version}'
-main: me.austin.wired.Wired
+main: me.toast.wired.Wired
 api-version: 1.19
 authors: [ Toast ]
 commands:

@@ -33,8 +33,8 @@ public class VaultUtils {
 
                 os.writeInt(items.size());
 
-                for (int i = 0; i < items.size(); i++){
-                    os.writeObject(items.get(i));
+                for (ItemStack item : items) {
+                    os.writeObject(item);
                 }
 
                 os.flush();
@@ -63,6 +63,7 @@ public class VaultUtils {
 
         String encodedItems = data.get(new NamespacedKey(Wired.getPlugin(), "vault"), PersistentDataType.STRING);
 
+        assert encodedItems != null;
         if (!encodedItems.isEmpty()){
 
             byte[] rawData = Base64.getDecoder().decode(encodedItems);

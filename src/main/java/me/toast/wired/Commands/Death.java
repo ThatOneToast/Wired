@@ -1,6 +1,5 @@
 package me.toast.wired.Commands;
 
-import me.toast.wired.Wired;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
@@ -10,8 +9,6 @@ import org.bukkit.entity.Player;
 
 public class Death implements CommandExecutor {
 
-    public Death(Wired plugin) {
-    }
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {

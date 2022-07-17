@@ -18,6 +18,7 @@ public class IronHelmetUtilsRare {
     public static ItemStack createIronHelmet(){
         ItemStack tankHelmet = new ItemStack(Material.IRON_HELMET);
         ItemMeta meta = tankHelmet.getItemMeta();
+        assert meta != null;
         meta.setDisplayName(ChatColor.AQUA + "Tank Helm");
         List<String> tankHelmetLore = new ArrayList<>();
         tankHelmetLore.add(ChatColor.DARK_GREEN + "Helmet granting you a 35% increased max health");

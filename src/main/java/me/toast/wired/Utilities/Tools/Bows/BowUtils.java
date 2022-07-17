@@ -8,7 +8,6 @@ import org.bukkit.inventory.meta.ItemMeta;
 import java.util.ArrayList;
 import java.util.List;
 
-import static me.toast.wired.Wired.getPlugin;
 
 public class BowUtils {
 

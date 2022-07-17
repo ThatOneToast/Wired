@@ -8,8 +8,6 @@ import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
 
-import static me.toast.wired.Wired.getPlugin;
-
 public class TeleportBow {
     public static void TeleportBowRecipe(){
         //Bow ( Teleport ) ( EPIC )

@@ -10,8 +10,6 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.RecipeChoice;
 import org.bukkit.inventory.ShapedRecipe;
 
-import static me.toast.wired.Wired.getPlugin;
-
 public class HolyHelmMythicRecipe {
     public static void HolyHelmetManaRecipe() {
         ShapedRecipe HolyHelm = new ShapedRecipe(new NamespacedKey(Wired.getPlugin(), "HolyHelmetMana"), new ItemStack(HolyGrailHelmetMana.createHolyGrailHelm()));

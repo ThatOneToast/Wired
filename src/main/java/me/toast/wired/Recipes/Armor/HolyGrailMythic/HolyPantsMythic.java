@@ -10,8 +10,6 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.RecipeChoice;
 import org.bukkit.inventory.ShapedRecipe;
 
-import static me.toast.wired.Wired.getPlugin;
-
 public class HolyPantsMythic {
     public static void HolyPantsRecipe() {
         ShapedRecipe HolyPants = new ShapedRecipe(new NamespacedKey(Wired.getPlugin(), "HolyPants"), new ItemStack(HolyGrailLeggings.createHolyGrailPants()));

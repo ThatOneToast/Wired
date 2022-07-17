@@ -47,7 +47,7 @@ public class PlayerJoin implements Listener {
             Mana.MANA_PER_SECOND.put(event.getPlayer(), 1.0);
         }else{
             Mana.MAX_ArcanePower.put(event.getPlayer(), 100.0);
-            Mana.MANA_PER_SECOND.put(event.getPlayer(), 1.0);
+            Mana.MANA_PER_SECOND.put(event.getPlayer(), 0.5);
             event.setJoinMessage(ChatColor.RED + "" + ChatColor.BOLD + "[Wired] " + color + "Welcome Back " + event.getPlayer().getName() + color + "!");
         }
 

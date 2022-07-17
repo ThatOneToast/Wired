@@ -3,7 +3,6 @@ package me.toast.wired.Listeners.CustomItemListeners;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Sound;
-import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -13,7 +12,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-import java.util.Map;
+import java.util.Objects;
 
 public class TeleportBowListener implements Listener {
 
@@ -22,7 +21,7 @@ public class TeleportBowListener implements Listener {
 
         if (e.getEntity().getShooter() instanceof Player p) {
             ItemStack itemInMainHand = p.getInventory().getItemInMainHand();
-            if (itemInMainHand.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_PURPLE + "Teleport Bow")) {
+            if (Objects.requireNonNull(itemInMainHand.getItemMeta()).getDisplayName().equalsIgnoreCase(ChatColor.DARK_PURPLE + "Teleport Bow")) {
                 e.getEntity().setGlowing(true);
             }
             }
@@ -37,7 +36,7 @@ public class TeleportBowListener implements Listener {
 
             ItemStack itemInMainHand = p.getInventory().getItemInMainHand();
 
-            if (itemInMainHand.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.DARK_PURPLE + "Teleport Bow")) {
+            if (Objects.requireNonNull(itemInMainHand.getItemMeta()).getDisplayName().equalsIgnoreCase(ChatColor.DARK_PURPLE + "Teleport Bow")) {
 
                 Location location = e.getEntity().getLocation();
                 if(e.getEntity().isGlowing()){

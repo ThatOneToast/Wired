@@ -3,7 +3,6 @@ package me.toast.wired.Listeners.CustomMobs;
 import org.bukkit.ChatColor;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.entity.Blaze;
-import org.bukkit.entity.Enderman;
 import org.bukkit.entity.PigZombie;
 import org.bukkit.entity.WitherSkeleton;
 import org.bukkit.event.EventHandler;

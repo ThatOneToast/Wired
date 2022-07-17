@@ -12,15 +12,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-import static me.toast.wired.Wired.getPlugin;
 
 public class IronChestUtilsRare {
 
     public static ItemStack createTankChestplate(){
         ItemStack tankChestplate = new ItemStack(Material.IRON_CHESTPLATE);
         ItemMeta meta = tankChestplate.getItemMeta();
+        assert meta != null;
         meta.setDisplayName(ChatColor.AQUA + "Tank Chestplate");
-        List<String> tankChestplateLore = new ArrayList<String>();
+        List<String> tankChestplateLore = new ArrayList<>();
         tankChestplateLore.add(ChatColor.DARK_GREEN + "Chestplate granting you a 35% increased max health");
         tankChestplateLore.add(ChatColor.AQUA + "Rarity: RARE");
 

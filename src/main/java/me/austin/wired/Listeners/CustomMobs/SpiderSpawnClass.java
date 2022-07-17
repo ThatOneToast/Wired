@@ -207,6 +207,14 @@ public class SpiderSpawnClass implements Listener {
                 spider.setHealth(385);
 
             }
+            if(spider.getLocation().getBlock().getBiome().equals(Biome.SAVANNA_PLATEAU)){
+                Objects.requireNonNull(spider.getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(385);
+                Objects.requireNonNull(spider.getAttribute(Attribute.GENERIC_ATTACK_DAMAGE)).setBaseValue(44);
+                spider.setCustomName(ChatColor.DARK_RED + "[30] spider");
+                spider.setCustomNameVisible(true);
+                spider.setHealth(385);
+
+            }
 
         }
     }

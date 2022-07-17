@@ -195,6 +195,13 @@ public class ZombieSpawnClass implements Listener {
                 zombie.setCustomNameVisible(true);
                 zombie.setHealth(385);
             }
+            if(zombie.getLocation().getBlock().getBiome().equals(Biome.SAVANNA_PLATEAU)){
+                Objects.requireNonNull(zombie.getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(385);
+                Objects.requireNonNull(zombie.getAttribute(Attribute.GENERIC_ATTACK_DAMAGE)).setBaseValue(44);
+                zombie.setCustomName(ChatColor.DARK_RED + "[30] Zombie");
+                zombie.setCustomNameVisible(true);
+                zombie.setHealth(385);
+            }
 
         }
     }

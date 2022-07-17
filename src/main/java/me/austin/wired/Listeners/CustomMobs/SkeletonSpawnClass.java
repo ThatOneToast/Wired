@@ -207,6 +207,14 @@ public class SkeletonSpawnClass implements Listener {
                 skeleton.setHealth(385);
 
             }
+            if(skeleton.getLocation().getBlock().getBiome().equals(Biome.SAVANNA_PLATEAU)){
+                Objects.requireNonNull(skeleton.getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(385);
+                Objects.requireNonNull(skeleton.getAttribute(Attribute.GENERIC_ATTACK_DAMAGE)).setBaseValue(44);
+                skeleton.setCustomName(ChatColor.DARK_RED + "[30] skeleton");
+                skeleton.setCustomNameVisible(true);
+                skeleton.setHealth(385);
+
+            }
 
         }
     }

@@ -16,17 +16,16 @@ import me.austin.wired.Recipes.Armor.TankARmorEpic.IronBootsEpic;
 import me.austin.wired.Recipes.Armor.TankARmorEpic.IronChestEpic;
 import me.austin.wired.Recipes.Armor.TankARmorEpic.IronHelmEpic;
 import me.austin.wired.Recipes.Armor.TankARmorEpic.IronPantsEpic;
-import me.austin.wired.Recipes.Other.Healer;
+import me.austin.wired.Recipes.Other.*;
 import me.austin.wired.Recipes.Tools.Bows.LightningBow;
 import me.austin.wired.Recipes.Tools.Bows.PoisonBow;
 import me.austin.wired.Recipes.Tools.Bows.TeleportBow;
-import me.austin.wired.Recipes.Other.Feeder;
-import me.austin.wired.Recipes.Other.FlyingFeather;
-import me.austin.wired.Recipes.Other.HealthBooster;
 import me.austin.wired.Recipes.Tools.Axe.StrongAxeRecipe;
 import me.austin.wired.Recipes.Tools.Hoe.LoyalHoeRecipe;
 import me.austin.wired.Recipes.Tools.Pickaxes.SpeedyPickaxeRecipe;
 import me.austin.wired.Recipes.Tools.Pickaxes.TuffedWoodenPickaxe;
+import me.austin.wired.Recipes.Tools.Shield.FortifiedShieldRecipe;
+import me.austin.wired.Recipes.Tools.Shield.HeavyFortifiedShieldRecipe;
 import me.austin.wired.Recipes.Tools.Swords.HardenedIronSword;
 import me.austin.wired.Recipes.Tools.Swords.MonsterSlayer;
 import me.austin.wired.Recipes.Tools.Swords.SkullCrusher;
@@ -90,6 +89,7 @@ public class Wired extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new ZombieDeathClass(), this);
         getServer().getPluginManager().registerEvents(new endermanDeathClass(), this);
         getServer().getPluginManager().registerEvents(new EnderDragonSpawnClass(), this);
+        getServer().getPluginManager().registerEvents(new HellSpawnClass(), this);
 
 
         // Register our commands
@@ -138,7 +138,9 @@ public class Wired extends JavaPlugin implements Listener {
         HolyHelmMythic.HolyHelmetRecipe();
         HolyPantsMythic.HolyPantsRecipe();
 
-        //Crafting Materials
+        //Shields
+        FortifiedShieldRecipe.FortifiedShieldRecipe();
+        HeavyFortifiedShieldRecipe.HeavyFortifiedShieldRecipe();
 
 
         //Usable Items
@@ -161,6 +163,8 @@ public class Wired extends JavaPlugin implements Listener {
         //Hoes
         LoyalHoeRecipe.LoyalHoeRecipe();
 
+        //Exp Bottle
+        ExperienceBottle.ExperienceBottleRecipe();
 
 
     }

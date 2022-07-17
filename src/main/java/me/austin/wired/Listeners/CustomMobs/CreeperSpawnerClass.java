@@ -231,6 +231,15 @@ public class CreeperSpawnerClass implements Listener {
                 creeper.setExplosionRadius(30);
 
             }
+            if(creeper.getLocation().getBlock().getBiome().equals(Biome.SAVANNA_PLATEAU)){
+                Objects.requireNonNull(creeper.getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(385);
+                Objects.requireNonNull(creeper.getAttribute(Attribute.GENERIC_ATTACK_DAMAGE)).setBaseValue(44);
+                creeper.setCustomName(ChatColor.DARK_RED + "[30] creeper");
+                creeper.setCustomNameVisible(true);
+                creeper.setHealth(385);
+                creeper.setExplosionRadius(30);
+
+            }
 
         }
     }

@@ -1,7 +1,6 @@
 package me.toast.wired.Listeners.ServerListeners;
 
 import me.toast.wired.Utilities.PlayerUtils.Mana;
-import me.toast.wired.Utilities.PlayerUtils.Stamina;
 import me.toast.wired.Wired;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
@@ -13,7 +12,6 @@ import org.bukkit.event.entity.EntityRegainHealthEvent;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.Objects;
-import java.util.UUID;
 
 public class ManaHealthChange implements Listener {
 
@@ -38,8 +36,7 @@ public class ManaHealthChange implements Listener {
                     Player.Spigot spigot = player.spigot();
                     spigot.sendMessage(ChatMessageType.ACTION_BAR,
                             (new TextComponent("❤" + ChatColor.RED + "" + ChatColor.BOLD + Math.round(player.getHealth()) + " " +
-                                    ChatColor.AQUA + "\uD83E\uDDEA" + ChatColor.BOLD + Mana.getPlayerMana(player) +
-                                    ChatColor.YELLOW + " ⚡"  + "" + ChatColor.BOLD + Math.round(Stamina.getStamina(player)))));
+                                    ChatColor.AQUA + "\uD83E\uDDEA" + ChatColor.BOLD + Mana.getPlayerMana(player))));
 
 
                 }

@@ -34,7 +34,6 @@ public class FlyingFeatherListener implements Listener {
                                 //stop the bukkit runnable
 
                                 new BukkitRunnable() {
-                                    public final int task = this.getTaskId();
                                     @Override
                                     public void run() {
                                         if (e.getPlayer().isFlying()) {

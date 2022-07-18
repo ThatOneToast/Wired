@@ -5,7 +5,6 @@ import me.toast.wired.Utilities.Armor.Starter.StarterChest;
 import me.toast.wired.Utilities.Armor.Starter.StarterHelm;
 import me.toast.wired.Utilities.Armor.Starter.StarterPants;
 import me.toast.wired.Utilities.PlayerUtils.Mana;
-import me.toast.wired.Utilities.PlayerUtils.Stamina;
 import me.toast.wired.Utilities.PlayerVaults.VaultUtils;
 import me.toast.wired.Wired;
 import org.bukkit.ChatColor;
@@ -46,13 +45,9 @@ public class PlayerJoin implements Listener {
             player.getInventory().addItem(new ItemStack(Material.COOKED_BEEF, 32));
             Mana.MAX_ArcanePower.put(event.getPlayer(), 100.0);
             Mana.MANA_PER_SECOND.put(event.getPlayer(), 1.0);
-            Stamina.STAMINA_PER_SECOND.put(event.getPlayer(), 5.0);
-            Stamina.MAX_STAMINA.put(event.getPlayer(), 100.0);
         }else{
             Mana.MAX_ArcanePower.put(event.getPlayer(), 100.0);
             Mana.MANA_PER_SECOND.put(event.getPlayer(), 0.5);
-            Stamina.STAMINA_PER_SECOND.put(event.getPlayer(), 5.0);
-            Stamina.MAX_STAMINA.put(event.getPlayer(), 100.0);
             event.setJoinMessage(ChatColor.RED + "" + ChatColor.BOLD + "[Wired] " + color + "Welcome Back " + event.getPlayer().getName() + color + "!");
         }
 

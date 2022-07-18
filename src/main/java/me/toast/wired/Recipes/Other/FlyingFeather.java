@@ -15,7 +15,7 @@ public class FlyingFeather {
         ShapedRecipe FlyingFeather = new ShapedRecipe(new NamespacedKey(Wired.getPlugin(), "FlyingFeather"), FlyingFeatherUtils.createFlyingFeather());
         FlyingFeather.shape("SES", "SES", "SES");
         FlyingFeather.setIngredient('S', Material.FEATHER);
-        FlyingFeather.setIngredient('E', Material.DIAMOND);
+        FlyingFeather.setIngredient('E', Material.DIAMOND_BLOCK);
         Bukkit.addRecipe(FlyingFeather);
 
     }

@@ -45,7 +45,6 @@ import me.toast.wired.Recipes.Armor.TraversalArmorCommon.LeatherHelmetCommon;
 import me.toast.wired.Recipes.Armor.TraversalArmorCommon.LeatherPantsCommon;
 import me.toast.wired.Utilities.HomeFiles;
 import me.toast.wired.Utilities.PlayerUtils.Mana;
-import me.toast.wired.Utilities.PlayerUtils.Stamina;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
@@ -113,6 +112,7 @@ public class Wired extends JavaPlugin implements Listener {
         Objects.requireNonNull(getCommand("rEnchant")).setExecutor(new rEnchant());
         Objects.requireNonNull(getCommand("setMaxMana")).setExecutor(new setMaxMana());
         Objects.requireNonNull(getCommand("setManaRegen")).setExecutor(new SetRegenMana());
+
 
         //Custom Weapons
         LightningBow.LightningBowRecipe();
@@ -199,7 +199,6 @@ public class Wired extends JavaPlugin implements Listener {
             Mana.MAX_ArcanePower.put(player, 100.0);
         }
         Mana.addManaPerSecond();
-        Stamina.addStaminaPerSeconded();
 
 
 

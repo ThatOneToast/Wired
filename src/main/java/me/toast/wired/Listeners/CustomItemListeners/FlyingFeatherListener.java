@@ -3,6 +3,7 @@ package me.toast.wired.Listeners.CustomItemListeners;
 import me.toast.wired.Utilities.PlayerUtils.Mana;
 import me.toast.wired.Wired;
 import me.toast.wired.Listeners.ServerListeners.CombatLog;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -24,36 +25,39 @@ public class FlyingFeatherListener implements Listener {
                 if (Mana.getPlayerMana(p) >= 1) {
                     if (e.getAction() == Action.RIGHT_CLICK_AIR) {
                         if (!CombatLog.incombat.contains(p.getName())) {
-                            e.getPlayer().setAllowFlight(true);
-                            e.getPlayer().setFlying(true);
-                            e.getPlayer().sendMessage(ChatColor.GREEN + "You are now flying!");
-                            new BukkitRunnable(){
-                                @Override
-                                public void run(){
-                                    if(e.getPlayer().isFlying()){
-                                        Mana.removeMana(p, 1.0);
-                                        if(Mana.getPlayerMana(p) <= 1){
-                                            p.setFlying(false);
-                                            p.setAllowFlight(false);
-                                            p.sendMessage(ChatColor.RED + "You are out of mana!");
+                            if (p.isFlying()) {
+                                p.sendMessage(ChatColor.RED + "You are already flying!");
+                            } else {
+                                e.getPlayer().setAllowFlight(true);
+                                e.getPlayer().setFlying(true);
+                                e.getPlayer().sendMessage(ChatColor.GREEN + "You are now flying!");
+                                //stop the bukkit runnable
+
+                                new BukkitRunnable() {
+                                    public final int task = this.getTaskId();
+                                    @Override
+                                    public void run() {
+                                        if (e.getPlayer().isFlying()) {
+                                            Mana.removeMana(p, 1);
+                                            if (Mana.getPlayerMana(p) <= 1) {
+                                                Bukkit.getScheduler().cancelTask(this.getTaskId());
+                                                p.setFlying(false);
+                                                p.setAllowFlight(false);
+                                                p.sendMessage(ChatColor.RED + "You are out of mana!");
+                                            }
                                         }
                                     }
-                                }
-                            }.runTaskTimer(Wired.getPlugin(), 0, 20);
-                        }
-                        if (CombatLog.incombat.contains(p.getName())) {
-                            e.getPlayer().sendMessage(ChatColor.RED + "You can't fly because you are in combat!");
+                                }.runTaskTimer(Wired.getPlugin(), 0, 20);
+                            }
+                            if (CombatLog.incombat.contains(p.getName())) {
+                                e.getPlayer().sendMessage(ChatColor.RED + "You can't fly because you are in combat!");
+                            }
                         }
                     }
                 }
-                if (e.getAction() == Action.LEFT_CLICK_AIR) {
-                    e.getPlayer().setAllowFlight(false);
-                    e.getPlayer().setFlying(false);
-                    e.getPlayer().sendMessage(ChatColor.RED + "You are no longer flying!");
-                }
             }
+
         }
 
     }
-
 }

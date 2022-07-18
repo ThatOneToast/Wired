@@ -39,7 +39,7 @@ public class Mana {
     }
 
     public static void removeMana(Player p, double amount){
-        int playerMana = (int) Math.round(getPlayerMana(p));
+        double playerMana = getPlayerMana(p);
         if (!(amount <= 0)) {
             if (getPlayerMana(p) - amount >= 0){
                 ARCANE_POWER.put(p, (playerMana-amount));
@@ -59,7 +59,6 @@ public class Mana {
             }
         }, 0L, 20L);
     }
-
 
 
 }

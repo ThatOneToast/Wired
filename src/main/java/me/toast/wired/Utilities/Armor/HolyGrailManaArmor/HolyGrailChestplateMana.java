@@ -18,6 +18,7 @@ public class HolyGrailChestplateMana {
     public static ItemStack createHolyGrailManaChestPlate(){
         ItemStack item = new ItemStack(Material.DIAMOND_CHESTPLATE);
         ItemMeta meta = item.getItemMeta();
+        assert meta != null;
         meta.setDisplayName(ChatColor.LIGHT_PURPLE + "Holy Grail Infused Mana ChestPlate");
         List<String> itemLore = new ArrayList<>();
         itemLore.add(ChatColor.DARK_GREEN + "This ChestPlate has been infused with Mana.");

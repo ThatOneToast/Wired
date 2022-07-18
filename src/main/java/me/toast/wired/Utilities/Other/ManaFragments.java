@@ -17,8 +17,6 @@ public class ManaFragments {
         assert meta != null;
         meta.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Mana Fragment");
         List<String> feederLore = new ArrayList<>();
-        meta.addEnchant(Enchantment.DURABILITY, 10, true);
-        meta.setCustomModelData(642);
         feederLore.add(ChatColor.DARK_GREEN + "This Item can be used to infuse Holy Grail Armor.");
         feederLore.add(ChatColor.RED + "Beware upon doing so, you will lose all enchants on your armor.");
         feederLore.add(ChatColor.GOLD + "Rarity: GOLD");

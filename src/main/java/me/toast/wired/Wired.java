@@ -45,6 +45,7 @@ import me.toast.wired.Recipes.Armor.TraversalArmorCommon.LeatherHelmetCommon;
 import me.toast.wired.Recipes.Armor.TraversalArmorCommon.LeatherPantsCommon;
 import me.toast.wired.Utilities.HomeFiles;
 import me.toast.wired.Utilities.PlayerUtils.Mana;
+import me.toast.wired.Utilities.PlayerUtils.Stamina;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
@@ -75,6 +76,7 @@ public class Wired extends JavaPlugin implements Listener {
 
 
 
+        //Enchantments
 
         // Register our event listeners
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
@@ -193,10 +195,11 @@ public class Wired extends JavaPlugin implements Listener {
             player.setHealth(40);
             player.setSaturation(20);
             player.setFoodLevel(20);
-            Mana.MANA_PER_SECOND.put(player, 1.0);
+            Mana.MANA_PER_SECOND.put(player, 0.5);
             Mana.MAX_ArcanePower.put(player, 100.0);
         }
         Mana.addManaPerSecond();
+        Stamina.addStaminaPerSeconded();
 
 
 
@@ -209,6 +212,7 @@ public class Wired extends JavaPlugin implements Listener {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
     }
 
     public static Wired getPlugin() {

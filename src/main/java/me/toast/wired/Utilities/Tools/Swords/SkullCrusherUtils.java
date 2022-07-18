@@ -26,7 +26,7 @@ public class SkullCrusherUtils {
         skullCrusherLore.add(ChatColor.GOLD + "Rarity: LEGENDARY");
         meta.setLore(skullCrusherLore);
         meta.addEnchant(Enchantment.DAMAGE_ALL, 8, true);
-
+        meta.setCustomModelData(1);
         AttributeModifier damage = new AttributeModifier(UUID.randomUUID(), "GENERIC_ATTACK_DAMAGE", 10, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
         meta.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, damage);
         AttributeModifier attackSpeed = new AttributeModifier(UUID.randomUUID(), "GENERIC_ATTACK_SPEED", 0.5, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);

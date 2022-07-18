@@ -1,6 +1,6 @@
 package me.toast.wired.Listeners.CustomMobs;
 
-import me.toast.wired.Utilities.Other.ManaFragments;
+import me.toast.wired.Items.Other.ManaFragments;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Spider;
 import org.bukkit.event.EventHandler;

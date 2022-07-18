@@ -1,11 +1,11 @@
 package me.toast.wired.Listeners.ServerListeners;
 
-import me.toast.wired.Utilities.Armor.Starter.StarterBoots;
-import me.toast.wired.Utilities.Armor.Starter.StarterChest;
-import me.toast.wired.Utilities.Armor.Starter.StarterHelm;
-import me.toast.wired.Utilities.Armor.Starter.StarterPants;
-import me.toast.wired.Utilities.PlayerUtils.Mana;
-import me.toast.wired.Utilities.PlayerVaults.VaultUtils;
+import me.toast.wired.Items.Armor.Starter.StarterBoots;
+import me.toast.wired.Items.Armor.Starter.StarterChest;
+import me.toast.wired.Items.Armor.Starter.StarterHelm;
+import me.toast.wired.Items.Armor.Starter.StarterPants;
+import me.toast.wired.PlayerUtils.PlayerUtils.Mana;
+import me.toast.wired.PlayerUtils.PlayerVaults.VaultUtils;
 import me.toast.wired.Wired;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;

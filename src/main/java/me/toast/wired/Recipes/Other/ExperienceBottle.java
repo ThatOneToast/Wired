@@ -1,6 +1,6 @@
 package me.toast.wired.Recipes.Other;
 
-import me.toast.wired.Utilities.Other.ExpBottleUtils;
+import me.toast.wired.Items.Other.ExpBottleUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;

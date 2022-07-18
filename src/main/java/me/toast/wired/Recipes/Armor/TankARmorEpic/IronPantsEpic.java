@@ -1,6 +1,6 @@
 package me.toast.wired.Recipes.Armor.TankARmorEpic;
 
-import me.toast.wired.Utilities.Armor.TankArmorEpic.IronPantsUtilsEpic;
+import me.toast.wired.Items.Armor.TankArmorEpic.IronPantsUtilsEpic;
 import me.toast.wired.Wired;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;

@@ -1,8 +1,7 @@
 package me.toast.wired.Recipes.Armor.HolyGrailManaMythic;
 
-import me.toast.wired.Utilities.Armor.HolyGrailManaArmor.HolyGrailHelmetMana;
-import me.toast.wired.Utilities.Armor.HolyGrailMythic.HolyGrailHelmet;
-import me.toast.wired.Utilities.Other.ManaFragments;
+import me.toast.wired.Items.Armor.HolyGrailManaArmor.HolyGrailHelmetMana;
+import me.toast.wired.Items.Other.ManaFragments;
 import me.toast.wired.Wired;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;

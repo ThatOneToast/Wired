@@ -1,6 +1,6 @@
 package me.toast.wired.Listeners.CustomItemListeners;
 
-import me.toast.wired.Utilities.Other.HealthBoosterUtils;
+import me.toast.wired.Items.Other.HealthBoosterUtils;
 import org.bukkit.ChatColor;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.entity.Player;

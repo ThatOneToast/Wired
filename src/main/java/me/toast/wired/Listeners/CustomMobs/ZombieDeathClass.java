@@ -1,6 +1,6 @@
 package me.toast.wired.Listeners.CustomMobs;
 
-import me.toast.wired.Utilities.Other.HolyGrailFragments;
+import me.toast.wired.Items.Other.HolyGrailFragments;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Zombie;
 import org.bukkit.event.EventHandler;

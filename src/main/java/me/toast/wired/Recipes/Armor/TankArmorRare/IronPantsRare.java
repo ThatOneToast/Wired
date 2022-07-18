@@ -1,6 +1,6 @@
 package me.toast.wired.Recipes.Armor.TankArmorRare;
 
-import me.toast.wired.Utilities.Armor.TankArmor.IronPantsUtilsRare;
+import me.toast.wired.Items.Armor.TankArmor.IronPantsUtilsRare;
 import me.toast.wired.Wired;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;

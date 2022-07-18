@@ -1,6 +1,6 @@
 package me.toast.wired.Recipes.Tools.Pickaxes;
 
-import me.toast.wired.Utilities.Tools.Pickaxes.TuffedWoodenPickaxeUtils;
+import me.toast.wired.Items.Tools.Pickaxes.TuffedWoodenPickaxeUtils;
 import me.toast.wired.Wired;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;

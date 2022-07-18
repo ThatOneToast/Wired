@@ -1,6 +1,6 @@
 package me.toast.wired.Recipes.Tools.Axe;
 
-import me.toast.wired.Utilities.Tools.Axe.StrongAxeUtils;
+import me.toast.wired.Items.Tools.Axe.StrongAxeUtils;
 import me.toast.wired.Wired;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;

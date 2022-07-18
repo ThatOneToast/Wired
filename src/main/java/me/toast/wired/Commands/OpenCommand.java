@@ -1,6 +1,6 @@
 package me.toast.wired.Commands;
 
-import me.toast.wired.Utilities.PlayerVaults.VaultUtils;
+import me.toast.wired.PlayerUtils.PlayerVaults.VaultUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

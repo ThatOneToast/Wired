@@ -1,6 +1,6 @@
 package me.toast.wired.Recipes.Tools.Hoe;
 
-import me.toast.wired.Utilities.Tools.Hoe.LoyaltyHoeUtils;
+import me.toast.wired.Items.Tools.Hoe.LoyaltyHoeUtils;
 import me.toast.wired.Wired;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;

@@ -1,6 +1,6 @@
 package me.toast.wired.Recipes.Tools.Shield;
 
-import me.toast.wired.Utilities.Tools.Shield.HeavyFortifiedShieldUtils;
+import me.toast.wired.Items.Tools.Shield.HeavyFortifiedShieldUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;

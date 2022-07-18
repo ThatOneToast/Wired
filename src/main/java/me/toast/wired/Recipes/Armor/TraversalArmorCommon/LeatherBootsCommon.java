@@ -1,6 +1,6 @@
 package me.toast.wired.Recipes.Armor.TraversalArmorCommon;
 
-import me.toast.wired.Utilities.Armor.TraversalArmorCommon.LeatherBootsUtilsCommon;
+import me.toast.wired.Items.Armor.TraversalArmorCommon.LeatherBootsUtilsCommon;
 import me.toast.wired.Wired;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;

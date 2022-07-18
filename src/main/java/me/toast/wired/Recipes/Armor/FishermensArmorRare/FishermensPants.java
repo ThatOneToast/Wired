@@ -1,6 +1,6 @@
 package me.toast.wired.Recipes.Armor.FishermensArmorRare;
 
-import me.toast.wired.Utilities.Armor.FishermensArmor.PantsRare;
+import me.toast.wired.Items.Armor.FishermensArmor.PantsRare;
 import me.toast.wired.Wired;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;

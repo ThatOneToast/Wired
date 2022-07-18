@@ -1,6 +1,6 @@
 package me.toast.wired.Recipes.Other;
 
-import me.toast.wired.Utilities.Other.FlyingFeatherUtils;
+import me.toast.wired.Items.Other.FlyingFeatherUtils;
 import me.toast.wired.Wired;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;

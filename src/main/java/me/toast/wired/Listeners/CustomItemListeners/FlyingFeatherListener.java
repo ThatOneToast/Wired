@@ -1,6 +1,6 @@
 package me.toast.wired.Listeners.CustomItemListeners;
 
-import me.toast.wired.Utilities.PlayerUtils.Mana;
+import me.toast.wired.PlayerUtils.PlayerUtils.Mana;
 import me.toast.wired.Wired;
 import me.toast.wired.Listeners.ServerListeners.CombatLog;
 import org.bukkit.Bukkit;

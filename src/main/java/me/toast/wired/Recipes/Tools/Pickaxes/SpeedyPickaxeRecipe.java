@@ -11,7 +11,7 @@ import org.bukkit.inventory.ShapedRecipe;
 public class SpeedyPickaxeRecipe {
 
     public static void SpeedyPickRecipe() {
-        ShapedRecipe SpeedyPick = new ShapedRecipe(new NamespacedKey(Wired.getPlugin(), "SpeedyPickaxe"), new ItemStack(me.toast.wired.Utilities.Tools.Pickaxes.SpeedyPick.createSpeedyPick()));
+        ShapedRecipe SpeedyPick = new ShapedRecipe(new NamespacedKey(Wired.getPlugin(), "SpeedyPickaxe"), new ItemStack(me.toast.wired.Items.Tools.Pickaxes.SpeedyPick.createSpeedyPick()));
         SpeedyPick.shape("NDN", " D ", " D ");
         SpeedyPick.setIngredient('N', Material.NETHERITE_BLOCK);
         SpeedyPick.setIngredient('D', Material.DIAMOND_BLOCK);

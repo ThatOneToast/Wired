@@ -1,6 +1,6 @@
 package me.toast.wired.Listeners.ServerListeners;
 
-import me.toast.wired.Utilities.PlayerUtils.Mana;
+import me.toast.wired.PlayerUtils.PlayerUtils.Mana;
 import me.toast.wired.Wired;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;

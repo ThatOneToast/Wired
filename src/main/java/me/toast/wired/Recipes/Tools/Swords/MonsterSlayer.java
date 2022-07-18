@@ -1,6 +1,6 @@
 package me.toast.wired.Recipes.Tools.Swords;
 
-import me.toast.wired.Utilities.Tools.Swords.MonsterSlayerUtils;
+import me.toast.wired.Items.Tools.Swords.MonsterSlayerUtils;
 import me.toast.wired.Wired;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;

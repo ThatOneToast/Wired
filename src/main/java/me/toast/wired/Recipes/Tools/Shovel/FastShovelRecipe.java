@@ -1,6 +1,6 @@
 package me.toast.wired.Recipes.Tools.Shovel;
 
-import me.toast.wired.Utilities.Tools.Shovel.FastShovelUtils;
+import me.toast.wired.Items.Tools.Shovel.FastShovelUtils;
 import me.toast.wired.Wired;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;

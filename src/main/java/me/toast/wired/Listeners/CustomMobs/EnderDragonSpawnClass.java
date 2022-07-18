@@ -10,6 +10,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDeathEvent;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 
 import java.util.Objects;
 
@@ -20,7 +22,8 @@ public class EnderDragonSpawnClass implements Listener {
 
 
             Objects.requireNonNull(enderdragon.getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(4000);
-            enderdragon.setHealth(4000);
+            enderdragon.setHealth(2048);
+            enderdragon.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 10, 255, false, false));
 
             if(enderdragon.getLocation().getBlock().getBiome().equals(Biome.THE_END)){
                 enderdragon.setCustomName(ChatColor.DARK_RED + "[140] EnderDragon");

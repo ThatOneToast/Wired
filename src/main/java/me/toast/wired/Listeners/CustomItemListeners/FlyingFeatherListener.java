@@ -45,6 +45,9 @@ public class FlyingFeatherListener implements Listener {
                                                 p.sendMessage(ChatColor.RED + "You are out of mana!");
                                             }
                                         }
+                                        else{
+                                            Bukkit.getScheduler().cancelTask(this.getTaskId());
+                                        }
                                     }
                                 }.runTaskTimer(Wired.getPlugin(), 0, 20);
                             }

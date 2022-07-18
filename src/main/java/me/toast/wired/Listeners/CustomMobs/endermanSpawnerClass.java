@@ -219,7 +219,7 @@ public class endermanSpawnerClass implements Listener {
                 Objects.requireNonNull(enderman.getAttribute(Attribute.GENERIC_ATTACK_DAMAGE)).setBaseValue(75);
                 enderman.setCustomName(ChatColor.DARK_RED + "[70] enderman");
                 enderman.setCustomNameVisible(true);
-                enderman.setHealth(385);
+                enderman.setHealth(575);
 
             }
 

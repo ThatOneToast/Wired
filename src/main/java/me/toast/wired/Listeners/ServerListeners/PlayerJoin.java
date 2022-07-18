@@ -44,7 +44,7 @@ public class PlayerJoin implements Listener {
             player.getInventory().addItem(new ItemStack(Material.DIAMOND_PICKAXE));
             player.getInventory().addItem(new ItemStack(Material.COOKED_BEEF, 32));
             Mana.MAX_ArcanePower.put(event.getPlayer(), 100.0);
-            Mana.MANA_PER_SECOND.put(event.getPlayer(), 1.0);
+            Mana.MANA_PER_SECOND.put(event.getPlayer(), 0.5);
         }else{
             Mana.MAX_ArcanePower.put(event.getPlayer(), 100.0);
             Mana.MANA_PER_SECOND.put(event.getPlayer(), 0.5);

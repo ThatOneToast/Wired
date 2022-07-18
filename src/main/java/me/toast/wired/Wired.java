@@ -62,6 +62,7 @@ public class Wired extends JavaPlugin implements Listener {
     private HashMap<UUID, Location> homes;
     private HomeFiles files;
     private List<UUID> que;
+
     @Override
     public void onEnable() {
         // Plugin startup logic
@@ -71,7 +72,6 @@ public class Wired extends JavaPlugin implements Listener {
         this.files.init();
         this.que = new ArrayList<>();
         System.out.println("Wired is enabled!");
-
 
 
 
@@ -101,6 +101,7 @@ public class Wired extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new HellSpawnClass(), this);
         getServer().getPluginManager().registerEvents(new ManaHealthChange(), this);
         getServer().getPluginManager().registerEvents(new SpiderDeathClass(), this);
+        getServer().getPluginManager().registerEvents(new PlayerChat(), this);
 
 
         // Register our commands

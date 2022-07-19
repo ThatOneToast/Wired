@@ -20,3 +20,5 @@ commands:
     description: "Set your max mana"
   setManaRegen:
     description: "Set your mana regen"
+  giveSpell:
+    description: "Give a spell to a player"

@@ -73,7 +73,7 @@ public class PlayerJoin implements Listener {
 
         Player p = event.getPlayer();
         p.setHealthScaled(true);
-        p.setHealthScale(40.0D);
+        p.setHealthScale(20.0D);
         p.setHealth(20.00);
         PersistentDataContainer data = p.getPersistentDataContainer();
 

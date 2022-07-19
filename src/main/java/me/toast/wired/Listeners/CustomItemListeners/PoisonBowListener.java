@@ -24,7 +24,7 @@ public class PoisonBowListener implements Listener {
             if (entityHit instanceof Player playerHit) {
                 Arrow arrow = (Arrow) damager;
                 if (arrow.getShooter() instanceof Player player) {
-                    if (Objects.requireNonNull(player.getInventory().getItemInMainHand().getItemMeta()).getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "Poison Bow")) {
+                    if ((player.getInventory().getItemInMainHand().getItemMeta()).getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "Poison Bow")) {
                         playerHit.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 20*7, 20));
                         playerHit.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, 20*7, 220));
                     }

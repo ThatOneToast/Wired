@@ -4,6 +4,9 @@ import me.toast.wired.Commands.*;
 import me.toast.wired.Listeners.CustomItemListeners.*;
 import me.toast.wired.Listeners.CustomMobs.*;
 import me.toast.wired.Listeners.ServerListeners.*;
+import me.toast.wired.Listeners.Spells.FamiliarListener;
+import me.toast.wired.Listeners.Spells.FireBallListener;
+import me.toast.wired.Listeners.Spells.ManaRestoreListener;
 import me.toast.wired.Recipes.Armor.FishermensArmorRare.FishermensJacket;
 import me.toast.wired.Recipes.Armor.FishermensArmorRare.FishermensBoots;
 import me.toast.wired.Recipes.Armor.FishermensArmorRare.FishermensHat;
@@ -45,11 +48,15 @@ import me.toast.wired.Recipes.Armor.TraversalArmorCommon.LeatherHelmetCommon;
 import me.toast.wired.Recipes.Armor.TraversalArmorCommon.LeatherPantsCommon;
 import me.toast.wired.PlayerUtils.HomeFiles;
 import me.toast.wired.PlayerUtils.Mana.Mana;
+import net.md_5.bungee.api.ChatMessageType;
+import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.scheduler.BukkitRunnable;
 
 import java.io.IOException;
 import java.util.*;
@@ -72,8 +79,6 @@ public class Wired extends JavaPlugin implements Listener {
         this.files.init();
         this.que = new ArrayList<>();
         System.out.println("Wired is enabled!");
-
-
 
         //Enchantments
 
@@ -99,9 +104,11 @@ public class Wired extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new endermanDeathClass(), this);
         getServer().getPluginManager().registerEvents(new EnderDragonSpawnClass(), this);
         getServer().getPluginManager().registerEvents(new HellSpawnClass(), this);
-        getServer().getPluginManager().registerEvents(new ManaHealthChange(), this);
         getServer().getPluginManager().registerEvents(new SpiderDeathClass(), this);
         getServer().getPluginManager().registerEvents(new PlayerChat(), this);
+        getServer().getPluginManager().registerEvents(new FireBallListener(), this);
+        getServer().getPluginManager().registerEvents(new ManaRestoreListener(), this);
+        getServer().getPluginManager().registerEvents(new FamiliarListener(), this);
 
 
         // Register our commands
@@ -113,6 +120,7 @@ public class Wired extends JavaPlugin implements Listener {
         Objects.requireNonNull(getCommand("rEnchant")).setExecutor(new rEnchant());
         Objects.requireNonNull(getCommand("setMaxMana")).setExecutor(new setMaxMana());
         Objects.requireNonNull(getCommand("setManaRegen")).setExecutor(new SetRegenMana());
+        Objects.requireNonNull(getCommand("giveSpell")).setExecutor(new giveSpell());
 
 
         //Custom Weapons
@@ -195,7 +203,19 @@ public class Wired extends JavaPlugin implements Listener {
         }
         Mana.addManaPerSecond();
 
+        new BukkitRunnable() {
+            @Override
+            public void run() {
+                for (Player player : Bukkit.getServer().getOnlinePlayers()) {
+                    Player.Spigot spigot = player.spigot();
+                    spigot.sendMessage(ChatMessageType.ACTION_BAR,
+                            (new TextComponent("❤" + ChatColor.RED + "" + ChatColor.BOLD + Math.round(player.getHealth()) + " " +
+                                    ChatColor.AQUA + "\uD83E\uDDEA" + ChatColor.BOLD + Mana.getPlayerMana(player))));
 
+                }
+
+            }
+        }.runTaskTimer(Wired.getPlugin(), 0, 20);
 
     }
 

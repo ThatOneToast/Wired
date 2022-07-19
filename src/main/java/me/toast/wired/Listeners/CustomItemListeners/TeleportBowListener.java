@@ -21,7 +21,7 @@ public class TeleportBowListener implements Listener {
 
         if (e.getEntity().getShooter() instanceof Player p) {
             ItemStack itemInMainHand = p.getInventory().getItemInMainHand();
-            if (Objects.requireNonNull(itemInMainHand.getItemMeta()).getDisplayName().equalsIgnoreCase(ChatColor.DARK_PURPLE + "Teleport Bow")) {
+            if ((itemInMainHand.getItemMeta()).getDisplayName().equalsIgnoreCase(ChatColor.DARK_PURPLE + "Teleport Bow")) {
                 e.getEntity().setGlowing(true);
             }
             }

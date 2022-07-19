@@ -13,8 +13,8 @@ public class deathListener implements Listener {
             Player killer = event.getEntity().getKiller();
             killer.sendMessage(ChatColor.RED + "You have killed " + event.getEntity().getName());
         }
-            event.setDeathMessage(ChatColor.GOLD + event.getEntity().getKiller().getName() + " has killed " + event.getEntity().getName() +
-                    "." +
+        event.setDeathMessage(ChatColor.GOLD + event.getEntity().getName() +
+                "." +
                     ChatColor.RED + event.getEntity().getName() + " has died! " +
                             ChatColor.BOLD + ChatColor.YELLOW +
                             "DeathCords: " + "" + ChatColor.GREEN + ChatColor.BOLD + "" +

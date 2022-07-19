@@ -20,7 +20,7 @@ public class LightningBowListener implements Listener {
 
             ItemStack itemInMainHand = p.getInventory().getItemInMainHand();
 
-            if (Objects.requireNonNull(itemInMainHand.getItemMeta()).getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "Lightning Bow")) {
+            if ((itemInMainHand.getItemMeta()).getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "Lightning Bow")) {
 
                 Location location = e.getEntity().getLocation();
                 p.getWorld().spawnEntity(location, EntityType.LIGHTNING);

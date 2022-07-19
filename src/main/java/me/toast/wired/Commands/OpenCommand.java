@@ -17,21 +17,18 @@ public class OpenCommand implements CommandExecutor {
 
         if (sender instanceof Player p){
 
-            if (args.length > 0){
-                if (args[0].equalsIgnoreCase("open")){
 
-                    ArrayList<ItemStack> vaultItems = VaultUtils.getItems(p);
+            ArrayList<ItemStack> vaultItems = VaultUtils.getItems(p);
 
-                    Inventory vault = Bukkit.createInventory(p, 54, "Your Personal Vault");
+            Inventory vault = Bukkit.createInventory(p, 54, "Your Personal Vault");
 
-                    for (ItemStack vaultItem : vaultItems) {
+            for (ItemStack vaultItem : vaultItems) {
                         vault.addItem(vaultItem);
-                    }
-
-                    p.openInventory(vault);
-
-                }
             }
+
+            p.openInventory(vault);
+
+
 
         }
 

@@ -7,7 +7,6 @@ import me.toast.wired.Items.Armor.Starter.StarterPants;
 import me.toast.wired.PlayerUtils.Mana.Mana;
 import me.toast.wired.PlayerUtils.PlayerVaults.VaultUtils;
 import me.toast.wired.Wired;
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -75,7 +74,7 @@ public class PlayerJoin implements Listener {
         Player p = event.getPlayer();
         p.setHealthScaled(true);
         p.setHealthScale(40.0D);
-
+        p.setHealth(20.00);
         PersistentDataContainer data = p.getPersistentDataContainer();
 
         if (!data.has(new NamespacedKey(Wired.getPlugin(), "vault"), PersistentDataType.STRING)){

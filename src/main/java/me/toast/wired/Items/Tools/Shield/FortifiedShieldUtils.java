@@ -19,6 +19,7 @@ public class FortifiedShieldUtils {
         List<String> itemLore = new ArrayList<>();
         itemLore.add(ChatColor.DARK_GREEN + "UNBREAKING +25");
         itemLore.add(ChatColor.AQUA + "Rarity: RARE");
+        meta.setCustomModelData(401);
         meta.setLore(itemLore);
         meta.addEnchant(Enchantment.DURABILITY, 25, true);
         item.setItemMeta(meta);

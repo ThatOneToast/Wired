@@ -17,6 +17,7 @@ public class TuffedWoodenPickaxeUtils {
         List<String> TuffWoodenPickLore = new ArrayList<>();
         TuffWoodenPickLore.add(ChatColor.DARK_GREEN + "EFFICIENCY +7");
         TuffWoodenPickLore.add(ChatColor.GRAY + "Rarity: COMMON");
+        meta.setCustomModelData(502);
         meta.setLore(TuffWoodenPickLore);
         meta.setUnbreakable(true);
         meta.addEnchant(Enchantment.DIG_SPEED, 7, true);

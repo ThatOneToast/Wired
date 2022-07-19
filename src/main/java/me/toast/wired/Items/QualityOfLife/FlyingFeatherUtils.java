@@ -1,4 +1,4 @@
-package me.toast.wired.Items.Other;
+package me.toast.wired.Items.QualityOfLife;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -17,7 +17,7 @@ public class FlyingFeatherUtils {
         meta.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Flying Feather");
         List<String> flyingFeatherLore = new ArrayList<>();
         meta.addEnchant(Enchantment.DURABILITY, 1, true);
-        meta.setCustomModelData(142);
+        meta.setCustomModelData(803);
         flyingFeatherLore.add(ChatColor.DARK_GREEN + "This will make you as light as a feather and let you fly");
         flyingFeatherLore.add(ChatColor.DARK_GREEN + "Right click to fly, right click again to stop flying.");
         flyingFeatherLore.add(ChatColor.DARK_GREEN + "Rarity: UNCOMMON");

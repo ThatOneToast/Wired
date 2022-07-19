@@ -23,6 +23,7 @@ public class LeatherBootsUtilsCommon {
         lore.add(ChatColor.GRAY + "RARITY: COMMON");
         AttributeModifier speed = new AttributeModifier(UUID.randomUUID(), "GENERIC_MOVEMENT_SPEED", 0.0025, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.FEET);
         meta.addAttributeModifier(Attribute.GENERIC_MOVEMENT_SPEED, speed);
+        meta.setCustomModelData(920);
         meta.setLore(lore);
         boots.setItemMeta(meta);
         return boots;

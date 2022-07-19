@@ -29,7 +29,7 @@ public class IronHelmetUtilsEpic {
         meta.addAttributeModifier(Attribute.GENERIC_ARMOR, armor);
 
 
-
+        meta.setCustomModelData(909);
         meta.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 4, true);
         meta.setUnbreakable(true);
         meta.setLore(tankHelmetLore);

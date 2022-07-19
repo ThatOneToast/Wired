@@ -27,7 +27,7 @@ public class ChestRare {
         meta.addAttributeModifier(Attribute.GENERIC_MAX_HEALTH, modifier);
         AttributeModifier armor = new AttributeModifier(UUID.randomUUID(), "GENERIC_LUCK", 7.75, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.CHEST);
         meta.addAttributeModifier(Attribute.GENERIC_LUCK, armor);
-
+        meta.setCustomModelData(902);
         meta.setLore(tankChestplateLore);
         chest.setItemMeta(meta);
         return chest;

@@ -26,7 +26,7 @@ public class LeatherPantsUtilsCommon {
 
         AttributeModifier speed = new AttributeModifier(UUID.randomUUID(), "GENERIC_MOVEMENT_SPEED", 0.0025, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.LEGS);
         meta.addAttributeModifier(Attribute.GENERIC_MOVEMENT_SPEED, speed);
-
+        meta.setCustomModelData(919);
         meta.setLore(lore);
         pants.setItemMeta(meta);
         return pants;

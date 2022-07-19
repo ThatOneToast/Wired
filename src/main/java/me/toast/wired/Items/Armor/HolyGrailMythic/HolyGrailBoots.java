@@ -29,7 +29,7 @@ public class HolyGrailBoots {
         AttributeModifier armor = new AttributeModifier(UUID.randomUUID(), "GENERIC_ARMOR", 20, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.FEET);
         meta.addAttributeModifier(Attribute.GENERIC_ARMOR, armor);
 
-
+        meta.setCustomModelData(908);
         meta.addEnchant(Enchantment.DURABILITY, 8, true);
         meta.setLore(itemLore);
         item.setItemMeta(meta);

@@ -21,6 +21,7 @@ public class LoyaltyHoeUtils {
         LoyalHoeLore.add(ChatColor.DARK_GREEN + "Unbreaking +3");
         LoyalHoeLore.add(ChatColor.DARK_GREEN + "Rarity: UNCOMMON");
         meta.setLore(LoyalHoeLore);
+        meta.setCustomModelData(601);
         meta.addEnchant(Enchantment.LOYALTY, 9001, true);
         meta.addEnchant(Enchantment.DIG_SPEED, 3, true);
         LoyalHoe.setItemMeta(meta);

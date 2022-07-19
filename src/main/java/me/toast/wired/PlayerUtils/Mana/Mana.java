@@ -1,4 +1,4 @@
-package me.toast.wired.PlayerUtils.PlayerUtils;
+package me.toast.wired.PlayerUtils.Mana;
 
 import me.toast.wired.Wired;
 import org.bukkit.Bukkit;

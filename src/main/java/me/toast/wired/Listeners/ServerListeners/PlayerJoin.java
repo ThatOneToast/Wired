@@ -4,9 +4,10 @@ import me.toast.wired.Items.Armor.Starter.StarterBoots;
 import me.toast.wired.Items.Armor.Starter.StarterChest;
 import me.toast.wired.Items.Armor.Starter.StarterHelm;
 import me.toast.wired.Items.Armor.Starter.StarterPants;
-import me.toast.wired.PlayerUtils.PlayerUtils.Mana;
+import me.toast.wired.PlayerUtils.Mana.Mana;
 import me.toast.wired.PlayerUtils.PlayerVaults.VaultUtils;
 import me.toast.wired.Wired;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -19,6 +20,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
+import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -50,6 +52,24 @@ public class PlayerJoin implements Listener {
             Mana.MANA_PER_SECOND.put(event.getPlayer(), 0.5);
             event.setJoinMessage(ChatColor.RED + "" + ChatColor.BOLD + "[Wired] " + color + "Welcome Back " + event.getPlayer().getName() + color + "!");
         }
+
+        new BukkitRunnable() {
+            @Override
+            public void run() {
+                if (event.getPlayer().isFlying()) {
+                    if (Mana.getPlayerMana(player) <= 1) {
+                        player.setFlying(false);
+                        player.setAllowFlight(false);
+                        player.sendMessage(ChatColor.RED + "You are out of mana!");
+                    } else{
+                        Mana.removeMana(player, 1);
+                    }
+                }
+                else{
+                    Mana.removeMana(player, 0);
+                }
+            }
+        }.runTaskTimer(Wired.getPlugin(), 0, 20);
 
 
         Player p = event.getPlayer();

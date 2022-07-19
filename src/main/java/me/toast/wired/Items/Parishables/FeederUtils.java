@@ -1,4 +1,4 @@
-package me.toast.wired.Items.Other;
+package me.toast.wired.Items.Parishables;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -17,7 +17,7 @@ public class FeederUtils {
         meta.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "Feeder");
         List<String> feederLore = new ArrayList<>();
         meta.addEnchant(Enchantment.DURABILITY, 1, true);
-        meta.setCustomModelData(312);
+        meta.setCustomModelData(802);
         feederLore.add(ChatColor.DARK_GREEN + "This will feed you to full in 1 click");
         feederLore.add(ChatColor.AQUA + "Rarity: RARE");
         meta.setLore(feederLore);

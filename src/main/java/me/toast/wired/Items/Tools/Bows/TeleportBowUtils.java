@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class BowUtils {
+public class TeleportBowUtils {
 
     public static ItemStack createTeleportBow(){
         ItemStack bow = new ItemStack(Material.BOW);
@@ -19,6 +19,7 @@ public class BowUtils {
         List<String> lore = new ArrayList<String>();
         lore.add(ChatColor.DARK_GREEN + "Teleport to your arrow's location");
         lore.add("Rarity: Epic");
+        meta.setCustomModelData(703);
         meta.setLore(lore);
         bow.setItemMeta(meta);
         return bow;

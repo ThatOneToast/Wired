@@ -1,6 +1,6 @@
 package me.toast.wired.Listeners.CustomItemListeners;
 
-import me.toast.wired.PlayerUtils.PlayerUtils.Mana;
+import me.toast.wired.PlayerUtils.Mana.Mana;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

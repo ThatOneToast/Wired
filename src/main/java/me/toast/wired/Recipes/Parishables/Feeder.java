@@ -1,6 +1,6 @@
-package me.toast.wired.Recipes.Other;
+package me.toast.wired.Recipes.Parishables;
 
-import me.toast.wired.Items.Other.FeederUtils;
+import me.toast.wired.Items.Parishables.FeederUtils;
 import me.toast.wired.Wired;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;

@@ -29,7 +29,7 @@ public class IronBootsUtilsRare {
         meta.addAttributeModifier(Attribute.GENERIC_ARMOR, armor);
 
 
-
+        meta.setCustomModelData(916);
         meta.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 2, true);
         meta.setLore(tankBootsLore);
         tankBoots.setItemMeta(meta);

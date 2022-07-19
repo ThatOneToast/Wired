@@ -19,6 +19,7 @@ public class SpeedyPick {
         TuffWoodenPickLore.add(ChatColor.DARK_GREEN + "Unbreaking +7");
         TuffWoodenPickLore.add(ChatColor.DARK_GREEN + "EFFICIENCY +7");
         TuffWoodenPickLore.add(ChatColor.DARK_PURPLE + "Rarity: EPIC");
+        meta.setCustomModelData(501);
         meta.setLore(TuffWoodenPickLore);
         meta.addEnchant(Enchantment.DIG_SPEED, 7, true);
         meta.addEnchant(Enchantment.DURABILITY, 7, true);

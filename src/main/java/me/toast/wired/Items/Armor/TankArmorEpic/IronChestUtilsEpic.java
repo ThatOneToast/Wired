@@ -28,6 +28,7 @@ public class IronChestUtilsEpic {
         AttributeModifier armor = new AttributeModifier(UUID.randomUUID(), "GENERIC_ARMOR", 7.75, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.CHEST);
         meta.addAttributeModifier(Attribute.GENERIC_ARMOR, armor);
 
+        meta.setCustomModelData(910);
         meta.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 4, true);
         meta.setUnbreakable(true);
         meta.setLore(tankChestplateLore);

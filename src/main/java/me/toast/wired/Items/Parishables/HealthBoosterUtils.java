@@ -1,4 +1,4 @@
-package me.toast.wired.Items.Other;
+package me.toast.wired.Items.Parishables;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -17,7 +17,7 @@ public class HealthBoosterUtils {
         meta.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Health Booster");
         List<String> feederLore = new ArrayList<>();
         meta.addEnchant(Enchantment.DURABILITY, 1, true);
-        meta.setCustomModelData(312);
+        meta.setCustomModelData(805);
         feederLore.add(ChatColor.DARK_GREEN + "This will add 5 hearts to your health");
         feederLore.add(ChatColor.GOLD + "Rarity: Legendary");
         meta.setLore(feederLore);

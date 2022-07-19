@@ -1,7 +1,7 @@
 package me.toast.wired.Recipes.Armor.HolyGrailMythic;
 
 import me.toast.wired.Items.Armor.HolyGrailMythic.HolyGrailLeggings;
-import me.toast.wired.Items.Other.HolyGrailFragments;
+import me.toast.wired.Items.Ores.HolyGrailFragments;
 import me.toast.wired.Wired;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;

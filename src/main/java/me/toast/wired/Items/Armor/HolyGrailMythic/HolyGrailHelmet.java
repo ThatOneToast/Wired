@@ -29,7 +29,7 @@ public class HolyGrailHelmet {
         meta.addAttributeModifier(Attribute.GENERIC_ARMOR, armor);
 
 
-
+        meta.setCustomModelData(905);
         meta.addEnchant(Enchantment.DURABILITY, 8, true);
         meta.setLore(itemLore);
         item.setItemMeta(meta);

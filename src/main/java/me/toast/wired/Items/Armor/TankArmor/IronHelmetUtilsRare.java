@@ -30,7 +30,7 @@ public class IronHelmetUtilsRare {
         meta.addAttributeModifier(Attribute.GENERIC_ARMOR, armor);
 
 
-
+        meta.setCustomModelData(913);
         meta.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 2, true);
         meta.setLore(tankHelmetLore);
         tankHelmet.setItemMeta(meta);

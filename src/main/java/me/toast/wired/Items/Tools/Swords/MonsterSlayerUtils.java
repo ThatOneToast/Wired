@@ -29,7 +29,7 @@ public class MonsterSlayerUtils implements Listener {
         skullCrusherLore.add(ChatColor.GOLD + "Rarity: LEGENDARY");
         meta.setLore(skullCrusherLore);
         meta.addEnchant(Enchantment.DAMAGE_UNDEAD, 10, true);
-        meta.setCustomModelData(101);
+        meta.setCustomModelData(103);
 
         AttributeModifier attackSpeed = new AttributeModifier(UUID.randomUUID(), "GENERIC_ATTACK_SPEED", 0.5, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
         meta.addAttributeModifier(Attribute.GENERIC_ATTACK_SPEED, attackSpeed);

@@ -29,6 +29,7 @@ public class IronPantsUtilsRare {
         AttributeModifier armor = new AttributeModifier(UUID.randomUUID(), "GENERIC_ARMOR", 2.75, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.LEGS);
         meta.addAttributeModifier(Attribute.GENERIC_ARMOR, armor);
 
+        meta.setCustomModelData(915);
         meta.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 2, true);
         meta.setLore(tankPantsLore);
         tankPants.setItemMeta(meta);

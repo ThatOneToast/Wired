@@ -23,6 +23,7 @@ public class LightingBowUtils {
         lore.add(ChatColor.DARK_GREEN + "POWER +7");
         lore.add(ChatColor.DARK_GREEN + "FLAME +2");
         lore.add(ChatColor.GOLD+"Rarity: LEGENDARY");
+        meta.setCustomModelData(701);
         meta.setLore(lore);
         meta.addEnchant(Enchantment.ARROW_FIRE, 2, true);
         meta.addEnchant(Enchantment.ARROW_DAMAGE, 7, true);

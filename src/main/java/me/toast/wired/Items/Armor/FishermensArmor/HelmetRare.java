@@ -28,7 +28,7 @@ public class HelmetRare {
         meta.addAttributeModifier(Attribute.GENERIC_LUCK, armor);
 
 
-
+        meta.setCustomModelData(901);
         meta.setLore(tankHelmetLore);
         helm.setItemMeta(meta);
         return helm;

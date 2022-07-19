@@ -1,6 +1,6 @@
 package me.toast.wired.Commands;
 
-import me.toast.wired.PlayerUtils.PlayerUtils.Mana;
+import me.toast.wired.PlayerUtils.Mana.Mana;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;

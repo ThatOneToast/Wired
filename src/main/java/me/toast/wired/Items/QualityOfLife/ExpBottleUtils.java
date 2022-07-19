@@ -1,4 +1,4 @@
-package me.toast.wired.Items.Other;
+package me.toast.wired.Items.QualityOfLife;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -17,7 +17,7 @@ public class ExpBottleUtils {
         meta.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Holy Exp Bottle");
         List<String> feederLore = new ArrayList<>();
         meta.addEnchant(Enchantment.DURABILITY, 10, true);
-        meta.setCustomModelData(642);
+        meta.setCustomModelData(801);
         feederLore.add(ChatColor.DARK_GREEN + "This Item can give you Exp");
         feederLore.add(ChatColor.GOLD + "Rarity: GOLD");
         meta.setLore(feederLore);

@@ -29,7 +29,7 @@ public class IronChestUtilsRare {
         AttributeModifier armor = new AttributeModifier(UUID.randomUUID(), "GENERIC_ARMOR", 7.75, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.CHEST);
         meta.addAttributeModifier(Attribute.GENERIC_ARMOR, armor);
 
-
+        meta.setCustomModelData(914);
         meta.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 2, true);
         meta.setLore(tankChestplateLore);
         tankChestplate.setItemMeta(meta);

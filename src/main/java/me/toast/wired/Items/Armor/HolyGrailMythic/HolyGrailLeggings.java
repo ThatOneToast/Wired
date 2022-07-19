@@ -29,7 +29,7 @@ public class HolyGrailLeggings {
         meta.addAttributeModifier(Attribute.GENERIC_ARMOR, armor);
 
 
-
+        meta.setCustomModelData(906);
         meta.addEnchant(Enchantment.DURABILITY, 8, true);
         meta.setLore(itemLore);
         item.setItemMeta(meta);

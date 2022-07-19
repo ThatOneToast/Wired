@@ -27,6 +27,7 @@ public class LeatherHelmetUtilsCommon {
         AttributeModifier speed = new AttributeModifier(UUID.randomUUID(), "GENERIC_MOVEMENT_SPEED", 0.0025, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HEAD);
         meta.addAttributeModifier(Attribute.GENERIC_MOVEMENT_SPEED, speed);
 
+        meta.setCustomModelData(917);
         meta.setLore(lore);
         helmet.setItemMeta(meta);
         return helmet;

@@ -27,7 +27,7 @@ public class PantsRare {
         meta.addAttributeModifier(Attribute.GENERIC_MAX_HEALTH, modifier);
         AttributeModifier armor = new AttributeModifier(UUID.randomUUID(), "GENERIC_LUCK", 2.75, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.LEGS);
         meta.addAttributeModifier(Attribute.GENERIC_LUCK, armor);
-
+        meta.setCustomModelData(903);
         meta.setLore(tankPantsLore);
         pants.setItemMeta(meta);
         return pants;

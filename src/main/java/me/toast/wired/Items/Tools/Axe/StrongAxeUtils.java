@@ -21,6 +21,7 @@ public class StrongAxeUtils {
         TuffWoodenPickLore.add(ChatColor.DARK_GREEN + "Unbreaking +3");
         TuffWoodenPickLore.add(ChatColor.DARK_GREEN + "Rarity: UNCOMMON");
         meta.setLore(TuffWoodenPickLore);
+        meta.setCustomModelData(301);
         meta.addEnchant(Enchantment.DURABILITY, 3, true);
         meta.addEnchant(Enchantment.DIG_SPEED, 3, true);
         StrongAxe.setItemMeta(meta);

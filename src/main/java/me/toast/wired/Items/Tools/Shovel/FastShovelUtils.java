@@ -21,6 +21,7 @@ public class FastShovelUtils {
         TuffWoodenPickLore.add(ChatColor.AQUA + "Rarity: RARE");
         meta.setLore(TuffWoodenPickLore);
         meta.addEnchant(Enchantment.DIG_SPEED, 6, true);
+        meta.setCustomModelData(201);
         fastShovel.setItemMeta(meta);
         return fastShovel;
     }

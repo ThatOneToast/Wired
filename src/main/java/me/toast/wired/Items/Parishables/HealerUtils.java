@@ -1,4 +1,4 @@
-package me.toast.wired.Items.Other;
+package me.toast.wired.Items.Parishables;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -18,7 +18,7 @@ public class HealerUtils {
         meta.setDisplayName(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "Healer");
         List<String> feederLore = new ArrayList<>();
         meta.addEnchant(Enchantment.DURABILITY, 1, true);
-        meta.setCustomModelData(312);
+        meta.setCustomModelData(804);
         feederLore.add(ChatColor.DARK_GREEN + "This will Fill your hunger bar");
         feederLore.add(ChatColor.DARK_GREEN + "Give you regeneration 2 for 1 minute");
         feederLore.add(ChatColor.DARK_PURPLE + "Rarity: EPIC");

@@ -26,7 +26,7 @@ public class LeatherChestUtilsCommon {
 
         AttributeModifier speed = new AttributeModifier(UUID.randomUUID(), "GENERIC_MOVEMENT_SPEED", 0.0025, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.CHEST);
         meta.addAttributeModifier(Attribute.GENERIC_MOVEMENT_SPEED, speed);
-
+        meta.setCustomModelData(918);
         meta.setLore(lore);
         chestplate.setItemMeta(meta);
         return chestplate;

@@ -8,10 +8,6 @@ import me.toast.wired.Recipes.Armor.FishermensArmorRare.FishermensJacket;
 import me.toast.wired.Recipes.Armor.FishermensArmorRare.FishermensBoots;
 import me.toast.wired.Recipes.Armor.FishermensArmorRare.FishermensHat;
 import me.toast.wired.Recipes.Armor.FishermensArmorRare.FishermensPants;
-import me.toast.wired.Recipes.Armor.HolyGrailManaMythic.HolyBootsMythicRecipe;
-import me.toast.wired.Recipes.Armor.HolyGrailManaMythic.HolyChestMythicRecipe;
-import me.toast.wired.Recipes.Armor.HolyGrailManaMythic.HolyHelmMythicRecipe;
-import me.toast.wired.Recipes.Armor.HolyGrailManaMythic.HolyPantsMythicRecipe;
 import me.toast.wired.Recipes.Armor.HolyGrailMythic.HolyBootsMythic;
 import me.toast.wired.Recipes.Armor.HolyGrailMythic.HolyChestMythic;
 import me.toast.wired.Recipes.Armor.HolyGrailMythic.HolyHelmMythic;
@@ -20,7 +16,11 @@ import me.toast.wired.Recipes.Armor.TankARmorEpic.IronBootsEpic;
 import me.toast.wired.Recipes.Armor.TankARmorEpic.IronChestEpic;
 import me.toast.wired.Recipes.Armor.TankARmorEpic.IronHelmEpic;
 import me.toast.wired.Recipes.Armor.TankARmorEpic.IronPantsEpic;
-import me.toast.wired.Recipes.Other.*;
+import me.toast.wired.Recipes.Parishables.Feeder;
+import me.toast.wired.Recipes.Parishables.Healer;
+import me.toast.wired.Recipes.Parishables.HealthBooster;
+import me.toast.wired.Recipes.QualityOfLife.ExperienceBottle;
+import me.toast.wired.Recipes.QualityOfLife.FlyingFeather;
 import me.toast.wired.Recipes.Tools.Bows.LightningBow;
 import me.toast.wired.Recipes.Tools.Bows.PoisonBow;
 import me.toast.wired.Recipes.Tools.Bows.TeleportBow;
@@ -44,7 +44,7 @@ import me.toast.wired.Recipes.Armor.TraversalArmorCommon.LeatherChestCommon;
 import me.toast.wired.Recipes.Armor.TraversalArmorCommon.LeatherHelmetCommon;
 import me.toast.wired.Recipes.Armor.TraversalArmorCommon.LeatherPantsCommon;
 import me.toast.wired.PlayerUtils.HomeFiles;
-import me.toast.wired.PlayerUtils.PlayerUtils.Mana;
+import me.toast.wired.PlayerUtils.Mana.Mana;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
@@ -152,12 +152,6 @@ public class Wired extends JavaPlugin implements Listener {
         HolyChestMythic.HolyChestRecipe();
         HolyHelmMythic.HolyHelmetRecipe();
         HolyPantsMythic.HolyPantsRecipe();
-
-        //Holy Grail Mana Armor Mythic
-        HolyBootsMythicRecipe.HolyBootsManaRecipe();
-        HolyChestMythicRecipe.HolyChestManaRecipe();
-        HolyHelmMythicRecipe.HolyHelmetManaRecipe();
-        HolyPantsMythicRecipe.HolyPantsManaRecipe();
 
 
         //Shields

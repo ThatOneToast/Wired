@@ -17,6 +17,7 @@ public class HeavyFortifiedShieldUtils {
         meta.setDisplayName(ChatColor.DARK_PURPLE + "Heavy Fortified Shield");
         List<String> itemLore = new ArrayList<>();
         itemLore.add(ChatColor.DARK_PURPLE + "Rarity: EPIC");
+        meta.setCustomModelData(402);
         meta.setLore(itemLore);
         meta.setUnbreakable(true);
         item.setItemMeta(meta);

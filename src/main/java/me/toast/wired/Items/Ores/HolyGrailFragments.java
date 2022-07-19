@@ -1,4 +1,4 @@
-package me.toast.wired.Items.Other;
+package me.toast.wired.Items.Ores;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -18,7 +18,7 @@ public class HolyGrailFragments {
         meta.setDisplayName(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Holy Grail Fragment");
         List<String> feederLore = new ArrayList<>();
         meta.addEnchant(Enchantment.DURABILITY, 10, true);
-        meta.setCustomModelData(102);
+        meta.setCustomModelData(1001);
         feederLore.add(ChatColor.DARK_GREEN + "This Item can make the holy grail armor.");
         feederLore.add(ChatColor.LIGHT_PURPLE + "Rarity: Mythic");
         meta.setLore(feederLore);

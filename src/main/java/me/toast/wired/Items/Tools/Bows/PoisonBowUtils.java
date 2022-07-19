@@ -22,6 +22,7 @@ public class PoisonBowUtils {
         lore.add(ChatColor.DARK_GREEN + "POISON +20");
         lore.add(ChatColor.DARK_GREEN + "HUNGER +220");
         lore.add(ChatColor.GOLD+"Rarity: LEGENDARY");
+        meta.setCustomModelData(702);
         meta.setLore(lore);
         meta.addEnchant(Enchantment.ARROW_FIRE, 5, true);
         meta.addEnchant(Enchantment.ARROW_DAMAGE, 3, true);

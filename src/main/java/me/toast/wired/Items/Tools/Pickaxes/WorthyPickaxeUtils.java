@@ -19,6 +19,7 @@ public class WorthyPickaxeUtils {
         TuffWoodenPickLore.add(ChatColor.DARK_GREEN + "Unbreaking +5");
         TuffWoodenPickLore.add(ChatColor.DARK_GREEN + "EFFICIENCY +4");
         TuffWoodenPickLore.add(ChatColor.AQUA + "Rarity: RARE");
+        meta.setCustomModelData(503);
         meta.setLore(TuffWoodenPickLore);
         meta.addEnchant(Enchantment.DIG_SPEED, 4, true);
         meta.addEnchant(Enchantment.DURABILITY, 5, true);

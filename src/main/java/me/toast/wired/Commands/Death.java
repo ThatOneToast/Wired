@@ -15,7 +15,7 @@ public class Death implements CommandExecutor {
 
         if (sender instanceof Player player) {
             Location lDeath = player.getLastDeathLocation();
-            if(lDeath == null){
+            if (lDeath == null) {
                 player.sendMessage(ChatColor.RED + "You have not died yet.");
             }
             if (player.getLevel() >= 30) {
@@ -29,6 +29,8 @@ public class Death implements CommandExecutor {
             }
 
         }
+
+
         return true;
     }
 }

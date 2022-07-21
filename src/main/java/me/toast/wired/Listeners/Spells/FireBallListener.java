@@ -14,11 +14,11 @@ import java.util.Objects;
 
 public class FireBallListener implements Listener {
 
-
+    @SuppressWarnings("unused")
     @EventHandler
     public static void onPlayerSpell(PlayerInteractEvent event){
         if(event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK){
-                if(Objects.requireNonNull(event.getPlayer().getInventory().getItemInMainHand().getItemMeta()).getDisplayName().equals(ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "Fire Ball")){
+                if((Objects.requireNonNull(event.getPlayer().getInventory().getItemInMainHand().getItemMeta())).getDisplayName().equals(ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "Fire Ball")){
                     if(Mana.getPlayerMana(event.getPlayer()) >= 35){
                         event.getPlayer().launchProjectile(Fireball.class);
                         Mana.removeMana(event.getPlayer(), 35);
@@ -26,7 +26,7 @@ public class FireBallListener implements Listener {
                         event.getPlayer().sendMessage(ChatColor.RED + "You do not have enough mana to cast this spell!");
                         }
 
-                }
+            }
 
         }
     }

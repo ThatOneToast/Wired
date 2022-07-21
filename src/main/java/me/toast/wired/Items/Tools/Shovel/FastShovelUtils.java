@@ -12,15 +12,16 @@ import java.util.List;
 public class FastShovelUtils {
 
     public static ItemStack createFastShovel(){
-        ItemStack fastShovel = new ItemStack(Material.IRON_SHOVEL);
+        ItemStack fastShovel = new ItemStack(Material.NETHERITE_SHOVEL);
         ItemMeta meta = fastShovel.getItemMeta();
         assert meta != null;
-        meta.setDisplayName(ChatColor.AQUA + "Fast Shovel");
+        meta.setDisplayName(ChatColor.LIGHT_PURPLE + "Fast Shovel");
         List<String> TuffWoodenPickLore = new ArrayList<>();
         TuffWoodenPickLore.add(ChatColor.DARK_GREEN + "EFFICIENCY +6");
-        TuffWoodenPickLore.add(ChatColor.AQUA + "Rarity: RARE");
+        TuffWoodenPickLore.add(ChatColor.LIGHT_PURPLE + "Rarity: MYTHIC");
         meta.setLore(TuffWoodenPickLore);
         meta.addEnchant(Enchantment.DIG_SPEED, 6, true);
+        meta.setUnbreakable(true);
         meta.setCustomModelData(201);
         fastShovel.setItemMeta(meta);
         return fastShovel;

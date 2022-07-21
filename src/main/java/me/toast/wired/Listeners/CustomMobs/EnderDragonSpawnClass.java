@@ -43,13 +43,6 @@ public class EnderDragonSpawnClass implements Listener {
         }
     }
     @EventHandler
-    public static void onEnderDragonDeath(EntityDeathEvent event){
-        if(event.getEntity() instanceof EnderDragon){
-            event.getDrops().clear();
-            event.setDroppedExp(500000);
-        }
-    }
-    @EventHandler
     public static void onEnderDragonDamage(EntityDamageByEntityEvent event){
         if(event.getEntity() instanceof EnderDragon ){
             if(event.getDamager() instanceof EnderDragon){

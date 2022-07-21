@@ -1,8 +1,10 @@
 package me.toast.wired;
 
 import me.toast.wired.Commands.*;
+import me.toast.wired.Items.Enchantments.Enchantments;
 import me.toast.wired.Listeners.CustomItemListeners.*;
 import me.toast.wired.Listeners.CustomMobs.*;
+import me.toast.wired.Listeners.Enchantments.ArmorEnchantment;
 import me.toast.wired.Listeners.ServerListeners.*;
 import me.toast.wired.Listeners.Spells.FamiliarListener;
 import me.toast.wired.Listeners.Spells.FireBallListener;
@@ -33,7 +35,6 @@ import me.toast.wired.Recipes.Tools.Pickaxes.SpeedyPickaxeRecipe;
 import me.toast.wired.Recipes.Tools.Pickaxes.TuffedWoodenPickaxe;
 import me.toast.wired.Recipes.Tools.Shield.FortifiedShieldRecipe;
 import me.toast.wired.Recipes.Tools.Shield.HeavyFortifiedShieldRecipe;
-import me.toast.wired.Recipes.Tools.Swords.HardenedIronSword;
 import me.toast.wired.Recipes.Tools.Swords.MonsterSlayer;
 import me.toast.wired.Recipes.Tools.Swords.SkullCrusher;
 import me.toast.wired.Recipes.Armor.TankArmorRare.IronBootsRare;
@@ -41,7 +42,6 @@ import me.toast.wired.Recipes.Armor.TankArmorRare.IronChestRare;
 import me.toast.wired.Recipes.Armor.TankArmorRare.IronHelmRare;
 import me.toast.wired.Recipes.Armor.TankArmorRare.IronPantsRare;
 import me.toast.wired.Recipes.Tools.Pickaxes.WorthyPickaxeRecipe;
-import me.toast.wired.Recipes.Tools.Shovel.FastShovelRecipe;
 import me.toast.wired.Recipes.Armor.TraversalArmorCommon.LeatherBootsCommon;
 import me.toast.wired.Recipes.Armor.TraversalArmorCommon.LeatherChestCommon;
 import me.toast.wired.Recipes.Armor.TraversalArmorCommon.LeatherHelmetCommon;
@@ -81,7 +81,7 @@ public class Wired extends JavaPlugin implements Listener {
         System.out.println("Wired is enabled!");
 
         //Enchantments
-
+        Enchantments.register();
         // Register our event listeners
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
         getServer().getPluginManager().registerEvents(new deathListener(), this);
@@ -109,6 +109,7 @@ public class Wired extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new FireBallListener(), this);
         getServer().getPluginManager().registerEvents(new ManaRestoreListener(), this);
         getServer().getPluginManager().registerEvents(new FamiliarListener(), this);
+        getServer().getPluginManager().registerEvents(new ArmorEnchantment(), this);
 
 
         // Register our commands
@@ -127,7 +128,6 @@ public class Wired extends JavaPlugin implements Listener {
         LightningBow.LightningBowRecipe();
         TeleportBow.TeleportBowRecipe();
         SkullCrusher.SkullCrusherRecipe();
-        HardenedIronSword.HardenedIronSwordRecipe();
         PoisonBow.PoisonBowRecipe();
         MonsterSlayer.MonsterSlayerRecipe();
 
@@ -182,7 +182,6 @@ public class Wired extends JavaPlugin implements Listener {
         SpeedyPickaxeRecipe.SpeedyPickRecipe();
 
         //Shovels
-        FastShovelRecipe.FastShovelRecipe();
 
         //Hoes
         LoyalHoeRecipe.LoyalHoeRecipe();
@@ -210,7 +209,10 @@ public class Wired extends JavaPlugin implements Listener {
                     Player.Spigot spigot = player.spigot();
                     spigot.sendMessage(ChatMessageType.ACTION_BAR,
                             (new TextComponent("❤" + ChatColor.RED + "" + ChatColor.BOLD + Math.round(player.getHealth()) + " " +
-                                    ChatColor.AQUA + "\uD83E\uDDEA" + ChatColor.BOLD + Mana.getPlayerMana(player))));
+                                    ChatColor.AQUA + "✎" + ChatColor.BOLD + Mana.getPlayerMana(player) + " "
+                            )));
+
+
 
                 }
 

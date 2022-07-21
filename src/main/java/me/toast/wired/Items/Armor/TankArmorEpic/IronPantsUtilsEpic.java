@@ -1,5 +1,6 @@
 package me.toast.wired.Items.Armor.TankArmorEpic;
 
+import me.toast.wired.Items.Enchantments.Enchantments;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
@@ -22,14 +23,13 @@ public class IronPantsUtilsEpic {
         meta.setDisplayName(ChatColor.DARK_PURPLE + "Tank Pants Epic");
         List<String> tankPantsLore = new ArrayList<>();
         tankPantsLore.add(ChatColor.DARK_GREEN + "Pants granting you a 35% increased max health");
+        tankPantsLore.add(ChatColor.DARK_PURPLE + "Armor: 7");
         tankPantsLore.add(ChatColor.DARK_PURPLE + "Rarity: EPIC");
 
         AttributeModifier modifier = new AttributeModifier(UUID.randomUUID(), "generic.max_health", 7, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.LEGS);
         meta.addAttributeModifier(Attribute.GENERIC_MAX_HEALTH, modifier);
-        AttributeModifier armor = new AttributeModifier(UUID.randomUUID(), "GENERIC_ARMOR", 2.75, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.LEGS);
-        meta.addAttributeModifier(Attribute.GENERIC_ARMOR, armor);
         meta.setCustomModelData(911);
-        meta.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 4, true);
+        meta.addEnchant(Enchantments.ARMOR, 7, true);
         meta.setUnbreakable(true);
         meta.setLore(tankPantsLore);
         tankPants.setItemMeta(meta);

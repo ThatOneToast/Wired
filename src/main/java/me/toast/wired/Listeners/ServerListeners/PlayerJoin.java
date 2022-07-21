@@ -69,8 +69,6 @@ public class PlayerJoin implements Listener {
                 }
             }
         }.runTaskTimer(Wired.getPlugin(), 0, 20);
-
-
         Player p = event.getPlayer();
         p.setHealthScaled(true);
         p.setHealthScale(20.0D);

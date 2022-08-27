@@ -1,5 +1,6 @@
 package me.toast.wired.Listeners.Spells;
 
+import me.toast.wired.Items.Spells.FIreBall;
 import me.toast.wired.PlayerUtils.Mana.Mana;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.EntityType;
@@ -18,7 +19,7 @@ public class FireBallListener implements Listener {
     @EventHandler
     public static void onPlayerSpell(PlayerInteractEvent event){
         if(event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK){
-                if((Objects.requireNonNull(event.getPlayer().getInventory().getItemInMainHand().getItemMeta())).getDisplayName().equals(ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "Fire Ball")){
+                if(event.getPlayer().getInventory().getItemInMainHand().getItemMeta().equals(FIreBall.FireBallSpell())){
                     if(Mana.getPlayerMana(event.getPlayer()) >= 35){
                         event.getPlayer().launchProjectile(Fireball.class);
                         Mana.removeMana(event.getPlayer(), 35);

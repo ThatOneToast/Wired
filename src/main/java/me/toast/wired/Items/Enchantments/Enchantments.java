@@ -3,15 +3,13 @@ package me.toast.wired.Items.Enchantments;
 import org.bukkit.enchantments.Enchantment;
 
 import java.lang.reflect.Field;
-import java.util.Arrays;
 
 public class Enchantments {
 
 
     public static final Enchantment ARMOR = new EnchantmentWrapper("armor", "Armor", 7);
-
     public static void register(){
-        boolean registered = Arrays.stream(Enchantment.values()).toList().contains(ARMOR);
+        boolean registered = false;
         if(!registered){
             registerEnchantments(ARMOR);
         }

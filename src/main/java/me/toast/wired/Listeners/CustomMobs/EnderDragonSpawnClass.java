@@ -30,16 +30,6 @@ public class EnderDragonSpawnClass implements Listener {
                 enderdragon.setCustomNameVisible(true);
 
             }
-
-
-            Objects.requireNonNull(enderdragon.getKiller()).getInventory().addItem(HolyGrailFragments.createHolyGrailFragmentMiddlePiece());
-            Objects.requireNonNull(enderdragon.getKiller()).getInventory().addItem(HolyGrailFragments.createHolyGrailFragmentMiddlePiece());
-            Objects.requireNonNull(enderdragon.getKiller()).getInventory().addItem(HolyGrailFragments.createHolyGrailFragmentSurrounding());
-            Objects.requireNonNull(enderdragon.getKiller()).getInventory().addItem(HolyGrailFragments.createHolyGrailFragmentSurrounding());
-            Objects.requireNonNull(enderdragon.getKiller()).getInventory().addItem(HolyGrailFragments.createHolyGrailFragmentMiddlePiece());
-            Objects.requireNonNull(enderdragon.getKiller()).getInventory().addItem(HolyGrailFragments.createHolyGrailFragmentMiddlePiece());
-            Objects.requireNonNull(enderdragon.getKiller()).getInventory().addItem(HolyGrailFragments.createHolyGrailFragmentSurrounding());
-            Objects.requireNonNull(enderdragon.getKiller()).getInventory().addItem(HolyGrailFragments.createHolyGrailFragmentSurrounding());
         }
     }
     @EventHandler

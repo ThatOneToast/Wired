@@ -1,5 +1,6 @@
 package me.toast.wired.Listeners.Spells;
 
+import me.toast.wired.Items.Spells.ManaRestore;
 import me.toast.wired.PlayerUtils.Mana.Mana;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -9,8 +10,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 
-import java.util.Objects;
-
 public class ManaRestoreListener implements Listener {
     @SuppressWarnings("unused")
     @EventHandler
@@ -18,8 +17,7 @@ public class ManaRestoreListener implements Listener {
         Player player = event.getPlayer();
         if (event.getAction() == Action.RIGHT_CLICK_AIR) {
 
-
-            if (Objects.requireNonNull(player.getInventory().getItemInMainHand().getItemMeta()).getDisplayName().equals(ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "Mana Restore")) {
+            if (player.getInventory().getItemInMainHand().getItemMeta().equals(ManaRestore.ManaRestoreSpell())) {
                 if (Mana.getPlayerMana(player) < 50) {
                     if (player.getHealth() <= 45) {
                         player.damage(45);

@@ -6,9 +6,6 @@ import me.toast.wired.Listeners.CustomItemListeners.*;
 import me.toast.wired.Listeners.CustomMobs.*;
 import me.toast.wired.Listeners.Enchantments.ArmorEnchantment;
 import me.toast.wired.Listeners.ServerListeners.*;
-import me.toast.wired.Listeners.Spells.FamiliarListener;
-import me.toast.wired.Listeners.Spells.FireBallListener;
-import me.toast.wired.Listeners.Spells.ManaRestoreListener;
 import me.toast.wired.Recipes.Armor.FishermensArmorRare.FishermensJacket;
 import me.toast.wired.Recipes.Armor.FishermensArmorRare.FishermensBoots;
 import me.toast.wired.Recipes.Armor.FishermensArmorRare.FishermensHat;
@@ -66,6 +63,7 @@ public class Wired extends JavaPlugin implements Listener {
 
     private static Wired plugin;
 
+
     private HashMap<UUID, Location> homes;
     private HomeFiles files;
     private List<UUID> que;
@@ -106,10 +104,8 @@ public class Wired extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new HellSpawnClass(), this);
         getServer().getPluginManager().registerEvents(new SpiderDeathClass(), this);
         getServer().getPluginManager().registerEvents(new PlayerChat(), this);
-        getServer().getPluginManager().registerEvents(new FireBallListener(), this);
-        getServer().getPluginManager().registerEvents(new ManaRestoreListener(), this);
-        getServer().getPluginManager().registerEvents(new FamiliarListener(), this);
         getServer().getPluginManager().registerEvents(new ArmorEnchantment(), this);
+        getServer().getPluginManager().registerEvents(new PillagerSpawn(), this);
 
 
         // Register our commands
@@ -122,6 +118,7 @@ public class Wired extends JavaPlugin implements Listener {
         Objects.requireNonNull(getCommand("setMaxMana")).setExecutor(new setMaxMana());
         Objects.requireNonNull(getCommand("setManaRegen")).setExecutor(new SetRegenMana());
         Objects.requireNonNull(getCommand("giveSpell")).setExecutor(new giveSpell());
+        Objects.requireNonNull(getCommand("gEnchant")).setExecutor(new gEnchant());
 
 
         //Custom Weapons
@@ -260,4 +257,6 @@ public class Wired extends JavaPlugin implements Listener {
     public void cancelQue(UUID id){
         this.que.remove(id);
     }
+
+
 }

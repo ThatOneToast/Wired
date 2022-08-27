@@ -20,11 +20,11 @@ public class LeatherHelmetUtilsCommon {
         List<String> lore = new ArrayList<>();
         meta.setDisplayName(ChatColor.GRAY + "Traversal Helmet");
         lore.add(ChatColor.DARK_GREEN + "Gives you the ability to walk and run faster");
-        lore.add(ChatColor.DARK_GREEN + "SPEED +0.0025");
+        lore.add(ChatColor.DARK_GREEN + "SPEED +0.005");
         lore.add(ChatColor.GRAY + "RARITY: COMMON");
 
 
-        AttributeModifier speed = new AttributeModifier(UUID.randomUUID(), "GENERIC_MOVEMENT_SPEED", 0.0025, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HEAD);
+        AttributeModifier speed = new AttributeModifier(UUID.randomUUID(), "GENERIC_MOVEMENT_SPEED", 0.005, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HEAD);
         meta.addAttributeModifier(Attribute.GENERIC_MOVEMENT_SPEED, speed);
 
         meta.setCustomModelData(917);

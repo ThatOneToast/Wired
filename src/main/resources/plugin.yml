@@ -22,3 +22,5 @@ commands:
     description: "Set your mana regen"
   giveSpell:
     description: "Give a spell to a player"
+  gEnchant:
+    description: "Give a custom enchant to a tool"

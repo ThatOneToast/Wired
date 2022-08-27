@@ -80,6 +80,21 @@ public class PlayerJoin implements Listener {
 
 
         }
+        if(player.getName().equals("ToastARG")){
+            player.setPlayerListName(ChatColor.RED + "[OP] [DEV] " + ChatColor.GOLD + player.getName());
+        }
+        else if(player.getName().equals("SpanglesLUL")){
+            player.setPlayerListName(ChatColor.BLUE + "[OP] [Builder] [Textures] " + ChatColor.WHITE + player.getName());
+        }
+        else if(player.getName().equals("MusicZae")){
+            player.setPlayerListName(ChatColor.LIGHT_PURPLE + "[OP] [GuineaPig] " + ChatColor.WHITE + player.getName());
+        }
+        else if(player.getName().equals("ArcanicSHI")){
+            player.setPlayerListName(ChatColor.RED + "[OP] [DEV] " + ChatColor.GOLD + player.getName());
+        }
+        else{
+            player.setPlayerListName(ChatColor.GREEN + "[Human]" + ChatColor.GRAY + player.getName());
+        }
 
     }
     @EventHandler

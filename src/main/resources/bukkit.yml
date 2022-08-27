@@ -1,0 +1,4 @@
+worlds:
+  world:
+    generator: WorldGeneration
+    biome-provider: WorldGeneration

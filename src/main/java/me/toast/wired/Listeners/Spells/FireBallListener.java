@@ -24,7 +24,7 @@ public class FireBallListener implements Listener {
                         event.getPlayer().launchProjectile(Fireball.class);
                         Mana.removeMana(event.getPlayer(), 35);
                     }else{
-                        event.getPlayer().sendMessage(ChatColor.RED + "You do not have enough mana to cast this spell!");
+                        event.getPlayer().sendMessage(ChatColor.RED + "You do not have enough mana to use this spell!");
                         }
 
             }

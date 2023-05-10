@@ -19,7 +19,7 @@ public class PlayerChat implements Listener {
         }else if(event.getPlayer().getName().equals("Bubbak984")){
             event.setFormat(ChatColor.RED + "[OP] [DEV] " + ChatColor.GOLD + "" + event.getFormat());
         }else if(event.getPlayer().getName().equals("ArcanicSHI")){
-            event.setFormat(ChatColor.RED + "[OP] [DEV] " + ChatColor.GOLD + "" + event.getFormat());
+            event.setFormat(ChatColor.RED + "[OP] " + ChatColor.GOLD + "" + event.getFormat());
         }
         else{
             event.setFormat(ChatColor.GREEN + "[Human] " + ChatColor.GRAY +  "" + event.getFormat());

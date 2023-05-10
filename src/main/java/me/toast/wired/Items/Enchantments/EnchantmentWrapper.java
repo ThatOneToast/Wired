@@ -17,6 +17,7 @@ public class EnchantmentWrapper extends Enchantment {
         this.name = name;
     }
 
+    /* Deprecated */
     @Override
     public String getName() {
         return name;
@@ -42,6 +43,7 @@ public class EnchantmentWrapper extends Enchantment {
         return false;
     }
 
+    /* Deprecated */
     @Override
     public boolean isCursed() {
         return false;

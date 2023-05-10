@@ -18,7 +18,7 @@ public class FlyingFeatherListener implements Listener {
         Player p = e.getPlayer();
         ItemStack itemInMainHand = p.getInventory().getItemInMainHand();
         if (itemInMainHand.getItemMeta() != null) {
-            if (itemInMainHand.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GREEN + "" + ChatColor.BOLD + "Flying Feather")) {
+            if (itemInMainHand.getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GREEN + " " + ChatColor.BOLD + "Flying Feather")) {
                 if (Mana.getPlayerMana(p) >= 1) {
                     if (e.getAction() == Action.RIGHT_CLICK_AIR) {
                         if (!CombatLog.incombat.contains(p.getName())) {

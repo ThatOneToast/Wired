@@ -78,20 +78,15 @@ public class Wired extends JavaPlugin implements Listener {
         this.files.init();
         this.que = new ArrayList<>();
         System.out.println("""
-                Wired...
-                Custom Mobs
-                Custom Items
-                Custom Enchantments
-                Custom Recipes
-                Custom Commands
-                Custom Abilities
-                
-                Wired has been enabled!
+        -------------------
+        ---Wired Enabled---
+        -------------------
         """);
 
 
         //Enchantments
-        Enchantments.register();
+        //Enchantments.register();
+
         // Registering the player listeners
         getServer().getPluginManager().registerEvents(new PlayerChat(), this);
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
@@ -225,8 +220,9 @@ public class Wired extends JavaPlugin implements Listener {
             Mana.MAX_ArcanePower.put(player, 100.0);
 
             /* Energy System */
+
             Energy.ENERGY_LEVEL.put(player, Energy.MAX_EnergyLevel.get(player));
-            Energy.ENERGY_PER_SEC.put(player, 0.15);
+            Energy.ENERGY_PER_SEC.put(player, (Double) 0.25);
             Energy.MAX_EnergyLevel.put(player, 100.0);
 
         }
@@ -243,11 +239,7 @@ public class Wired extends JavaPlugin implements Listener {
                                     ChatColor.AQUA + "✎" + ChatColor.BOLD + Mana.getPlayerMana(player) + ChatColor.GOLD +
                                     "✵" + ChatColor.BOLD + Energy.getPlayerEnergy(player) + ""
                             )));
-
-
-
                 }
-
             }
         }.runTaskTimer(Wired.getPlugin(), 0, 20);
 

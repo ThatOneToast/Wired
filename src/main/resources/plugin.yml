@@ -24,3 +24,9 @@ commands:
     description: "Give a spell to a player"
   gEnchant:
     description: "Give a custom enchant to a tool"
+  upgrade:
+    description: "Upgrade your character"
+  Prestige:
+    description: "Prestige your character"
+  character:
+    description: "View your character"

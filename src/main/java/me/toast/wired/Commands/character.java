@@ -13,7 +13,7 @@ public class character implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
         if (sender instanceof Player player) {
-            int health = (int) player.getMaxHealth();
+            int health = (int) player.getHealth();
             int level = player.getLevel();
             int kills = player.getStatistic(org.bukkit.Statistic.PLAYER_KILLS);
             int deaths = player.getStatistic(org.bukkit.Statistic.DEATHS);
@@ -21,8 +21,8 @@ public class character implements CommandExecutor {
             int timeplayed = player.getStatistic(org.bukkit.Statistic.PLAY_ONE_MINUTE);
             int actualtimeplayed = timeplayed / 20;
 
-            double mana = Mana.getPlayerMana(player);
-            double energy = Energy.getPlayerEnergy(player);
+            double mana = Mana.getPlayerMaxMana(player);
+            double energy = Energy.getPlayerMaxEnergy(player);
 
             player.sendMessage(ChatColor.GREEN + "Character Stats:");
             player.sendMessage(ChatColor.RED + "-- ❤: " + health);

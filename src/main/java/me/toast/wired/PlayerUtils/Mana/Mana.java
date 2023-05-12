@@ -15,6 +15,14 @@ public class Mana {
 
 
 
+    public static Double getPlayerMaxMana(Player player){
+        if (MAX_ArcanePower.get(player) != null){
+            return MAX_ArcanePower.get(player);
+        } else {
+            MAX_ArcanePower.put(player, 0.0);
+        }
+        return 0.0;
+    }
     @NonNull
     public static Double getPlayerMana(Player player) {
 

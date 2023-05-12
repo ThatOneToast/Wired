@@ -36,7 +36,7 @@ public class Prestige implements CommandExecutor {
                     player.sendMessage(ChatColor.RED + "Since you have Prestiged, you will have amplified Mana and Energy regen speeds.");
 
                     Mana.MANA_PER_SECOND.put(player, Mana.MANA_PER_SECOND.get(player) + 0.5);
-                    Energy.ENERGY_PER_SEC.put(player, Energy.ENERGY_PER_SEC.get(player) + 0.15);
+                    Energy.ENERGY_PER_SEC.put(player, Energy.ENERGY_PER_SEC.get(player) + 0.5);
 
 
                 }
@@ -58,7 +58,7 @@ public class Prestige implements CommandExecutor {
                     Double mEnergy = Energy.MAX_EnergyLevel.get(player);
                     Energy.MAX_EnergyLevel.put(player, mEnergy + 200);
 
-                    player.sendMessage(ChatColor.GREEN + "You have prestiged to level 1.");
+                    player.sendMessage(ChatColor.GREEN + "You have prestiged to level 2.");
                     player.sendMessage(ChatColor.RED + "Since you have Prestiged, you will have amplified Mana and Energy regen speeds.");
 
                     Mana.MANA_PER_SECOND.put(player, Mana.MANA_PER_SECOND.get(player) + 1);
@@ -83,7 +83,7 @@ public class Prestige implements CommandExecutor {
                     Double mEnergy = Energy.MAX_EnergyLevel.get(player);
                     Energy.MAX_EnergyLevel.put(player, mEnergy + 300);
 
-                    player.sendMessage(ChatColor.GREEN + "You have prestiged to level 1.");
+                    player.sendMessage(ChatColor.GREEN + "You have prestiged to level 3.");
                     player.sendMessage(ChatColor.RED + "Since you have Prestiged, you will have amplified Mana and Energy regen speeds.");
 
                     Mana.MANA_PER_SECOND.put(player, Mana.MANA_PER_SECOND.get(player) + 2);

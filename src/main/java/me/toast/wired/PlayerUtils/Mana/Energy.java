@@ -16,6 +16,15 @@ public class Energy {
 
 
 
+    public static Double getPlayerMaxEnergy(Player player){
+        if (MAX_EnergyLevel.get(player) != null){
+            return MAX_EnergyLevel.get(player);
+        } else {
+            MAX_EnergyLevel.put(player, 0.0);
+        }
+        return 0.0;
+    }
+
     @NonNull
     public static Double getPlayerEnergy(Player player) {
 

@@ -31,28 +31,26 @@ public class PlayerListener implements Listener {
     }
 
     @EventHandler
-    public void onPlayerMove(PlayerEvent event) {
-        if (event instanceof Player player){
-            if(player.isSprinting()){
-                // check if the player has enough energy to sprint
-                if(Energy.ENERGY_LEVEL.get(player) < 0.5){
-                    player.setSprinting(false);
-                    player.sendMessage(ChatColor.RED + "--- You're exhausted! ---");
-                } else {
-                    Energy.removeEnergy(player, 0.5);
-                }
+    public void onPlayerMove(PlayerMoveEvent event) {
+        Player player = event.getPlayer();
+        if (player.isSprinting()) {
+            // check if the player has enough energy to sprint
+            if (Energy.ENERGY_LEVEL.get(player) < 0.5) {
+                player.setSprinting(false);
+                player.sendMessage(ChatColor.RED + "--- You're exhausted! ---");
+            } else {
+                Energy.removeEnergy(player, 0.5);
             }
-            else if (player.isSneaking()) {
-                // check if the player has enough energy to sneak
-                if(Energy.ENERGY_LEVEL.get(player) < 0.5){
-                    player.setSneaking(false);
-                    player.sendMessage(ChatColor.RED + "--- Being sneaky can hurt your back. ---");
-                } else {
-                    Energy.removeEnergy(player, 0.175);
-                }
+        } else if (player.isSneaking()) {
+            // check if the player has enough energy to sneak
+            if (Energy.ENERGY_LEVEL.get(player) < 0.5) {
+                player.setSneaking(false);
+                player.sendMessage(ChatColor.RED + "--- Being sneaky can hurt your back. ---");
+            } else {
+                Energy.removeEnergy(player, 0.175);
             }
-
         }
+
     }
 
     @EventHandler

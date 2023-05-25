@@ -11,11 +11,9 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-import java.util.Objects;
-
 public class FamiliarListener implements Listener {
 
-    @SuppressWarnings("unused")
+    //@SuppressWarnings("unused")
     @EventHandler
     public void onFamiliar(PlayerInteractEvent event) {
         Player player = event.getPlayer();
@@ -23,9 +21,9 @@ public class FamiliarListener implements Listener {
 
             if ((player.getInventory().getItemInMainHand().getItemMeta().equals(Familiar.FamiliarSpell()))) {
                 if(Mana.getPlayerMana(player) >= 75) {
-                    player.addPotionEffect(new PotionEffect(PotionEffectType.HEALTH_BOOST, 300*20, 1, false, false));
-                    player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 300*20, 1, false, false));
-                    player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 300*20, 1, false, false));
+                    player.addPotionEffect(new PotionEffect(PotionEffectType.HEALTH_BOOST, 300*20, 1, true, true));
+                    player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 300*20, 1, true, true));
+                    player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 300*20, 1, true, true));
                     Mana.removeMana(player, 75);
                 }else{
                     player.sendMessage(ChatColor.RED + "You do not have enough mana to use this spell!");

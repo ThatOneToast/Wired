@@ -1,11 +1,13 @@
 package me.toast.wired;
 
 import me.toast.wired.Commands.*;
-import me.toast.wired.Items.Enchantments.Enchantments;
 import me.toast.wired.Listeners.CustomItemListeners.*;
 import me.toast.wired.Listeners.CustomMobs.*;
 import me.toast.wired.Listeners.Enchantments.ArmorEnchantment;
 import me.toast.wired.Listeners.ServerListeners.*;
+import me.toast.wired.Listeners.Spells.FamiliarListener;
+import me.toast.wired.Listeners.Spells.FireBallListener;
+import me.toast.wired.Listeners.Spells.ManaRestoreListener;
 import me.toast.wired.PlayerUtils.Mana.Energy;
 import me.toast.wired.Recipes.Armor.FishermensArmorRare.FishermensJacket;
 import me.toast.wired.Recipes.Armor.FishermensArmorRare.FishermensBoots;
@@ -87,6 +89,11 @@ public class Wired extends JavaPlugin implements Listener {
         //Enchantments
         //Enchantments.register();
 
+        // Spells
+        getServer().getPluginManager().registerEvents(new FamiliarListener(), this);
+        getServer().getPluginManager().registerEvents(new FireBallListener(), this);
+        getServer().getPluginManager().registerEvents(new ManaRestoreListener(), this);
+
         // Registering the player listeners
         getServer().getPluginManager().registerEvents(new PlayerChat(), this);
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
@@ -123,6 +130,7 @@ public class Wired extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new EnderDragonSpawnClass(), this);
         getServer().getPluginManager().registerEvents(new HellSpawnClass(), this);
         getServer().getPluginManager().registerEvents(new SpiderDeathClass(), this);
+        getServer().getPluginManager().registerEvents(new WitherSpawnDeathClass(), this);
 
         // Registering the commands
         Objects.requireNonNull(getCommand("sethome")).setExecutor( new SetHome(this));

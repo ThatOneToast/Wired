@@ -34,7 +34,7 @@ public class FireBallListener implements Listener {
     @EventHandler
     public static void onFireBallHit(ProjectileHitEvent event){
         if(event.getEntity().getType() == EntityType.FIREBALL){
-            event.getEntity().getWorld().createExplosion(event.getEntity().getLocation(), 4);
+            event.getEntity().getWorld().createExplosion(event.getEntity().getLocation(), 6);
         }
     }
 

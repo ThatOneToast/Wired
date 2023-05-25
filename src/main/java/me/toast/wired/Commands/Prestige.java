@@ -62,7 +62,7 @@ public class Prestige implements CommandExecutor {
                     player.sendMessage(ChatColor.RED + "Since you have Prestiged, you will have amplified Mana and Energy regen speeds.");
 
                     Mana.MANA_PER_SECOND.put(player, Mana.MANA_PER_SECOND.get(player) + 1);
-                    Energy.ENERGY_PER_SEC.put(player, Energy.ENERGY_PER_SEC.get(player) + 0.3);
+                    Energy.ENERGY_PER_SEC.put(player, Energy.ENERGY_PER_SEC.get(player) + 0.8);
                 }
 
                 /*

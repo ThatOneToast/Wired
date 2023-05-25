@@ -24,6 +24,9 @@ public class LightningBowListener implements Listener {
 
                 Location location = e.getEntity().getLocation();
                 p.getWorld().spawnEntity(location, EntityType.LIGHTNING);
+                p.getWorld().spawnEntity(location, EntityType.LIGHTNING);
+                p.getWorld().spawnEntity(location, EntityType.LIGHTNING);
+
             }
         }
     }

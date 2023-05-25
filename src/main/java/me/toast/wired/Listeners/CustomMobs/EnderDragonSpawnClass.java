@@ -19,27 +19,24 @@ public class EnderDragonSpawnClass implements Listener {
     @EventHandler
     public static void onEnderDragonSpawn(CreatureSpawnEvent event){
         if(event.getEntity() instanceof EnderDragon enderdragon){
-
-
-            Objects.requireNonNull(enderdragon.getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(4000);
-            enderdragon.setHealth(2048);
-            enderdragon.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 10, 255, false, false));
-
             if(enderdragon.getLocation().getBlock().getBiome().equals(Biome.THE_END)){
+                Objects.requireNonNull(enderdragon.getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(4000);
+                enderdragon.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 10, 255, false, false));
                 enderdragon.setCustomName(ChatColor.DARK_RED + "[140] EnderDragon");
                 enderdragon.setCustomNameVisible(true);
+                enderdragon.setHealth(2048);
 
             }
         }
     }
+
+    // if the Ender Dragon damages a player, multiply that damage by 4
     @EventHandler
     public static void onEnderDragonDamage(EntityDamageByEntityEvent event){
-        if(event.getEntity() instanceof EnderDragon ){
-            if(event.getDamager() instanceof EnderDragon){
-                event.setDamage(220);
+        if(event.getEntity() instanceof EnderDragon enderdragon){
+            if(event.getDamager() instanceof org.bukkit.entity.Player player){
+                event.setDamage(event.getDamage() * 4);
             }
-
-
         }
     }
 
